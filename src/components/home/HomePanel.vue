@@ -1,5 +1,6 @@
 <template>
-  <div class="home-panel-wrapper" v-on:click="jump(name)">
+<!--  <div class="home-panel-wrapper" v-on:click="jump(name)">-->
+  <div class="home-panel-wrapper">
     <div class="header">
       <p>{{ name }}</p>
     </div>
@@ -28,18 +29,18 @@
         </div>
       </div>
       <div class="home-panel-line-chart" :class="{ 'has-bar' : hasBar}" >
-        <line-chart/>
+        <line-chart :lineData="lineChartData"/>
       </div>
-      <div class="home-panel-bar-chart" :class="{}" v-if="hasBar">
-        <bar-chart/>
+      <div class="home-panel-bar-chart" v-if="hasBar">
+        <bar-chart :bar-data="barChartData"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import LineChart from "@/components/LineChart";
-import BarChart from "@/components/BarChart";
+import LineChart from "@/components/home/LineChart";
+import BarChart from "@/components/home/BarChart";
 export default {
   name: "HomePanel",
   components:{
@@ -52,9 +53,9 @@ export default {
     }
   },
   methods: {
-    jump:function (name) {
-      this.$router.push({ name: 'Park', params: { name: name }})
-    }
+    // jump:function (name) {
+    //   this.$router.push({ name: 'Park', params: { name: name }})
+    // }
   },
   props:{
     name: {
