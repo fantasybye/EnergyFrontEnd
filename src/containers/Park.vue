@@ -7,16 +7,16 @@
     <div class="neng-hao-fen-xi">
       <div class="panel-title"><span class="panel-title-text">园区能耗分析</span></div>
       <div class="panel-body neng-hao-body">
-        <div :id="`yong-dian-zhu-xiang-bar${id}`" class="yong-dian-zhu-xiang-bar"/>
+        <neng-hao-bar-chart :bar-data="parkData.nengHaoData.barData"/>
         <div :id="`yong-dian-zhu-xiang-pie${id}`" class="yong-dian-zhu-xiang-pie"/>
       </div>
     </div>
     <div class="fu-he-te-xing">
       <div class="panel-title"><span class="panel-title-text">负荷特性</span></div>
       <div class="panel-body fu-he-body">
-        <div :id="`zhu-shi-dian-line${id}`" class="zhu-shi-dian-line"/>
-        <div :id="`zhu-shi-re-line${id}`" class="zhu-shi-re-line"/>
-        <div :id="`zhu-shi-leng-line${id}`" class="zhu-shi-leng-line"/>
+        <div class="fu-he-te-xing-chart" v-for="lineData in parkData.fuHeLineData" :key="lineData.id">
+          <fu-he-line-chart  :line-data="lineData" />
+        </div>
       </div>
     </div>
     <div class="she-bei-tuo-pu">
@@ -82,8 +82,13 @@
 </template>
 
 <script>
+import FuHeLineChart from "@/components/park/FuHeLineChart";
+import NengHaoBarChart from "@/components/park/NengHaoBarChart";
+
 export default {
   components:{
+    FuHeLineChart,
+    NengHaoBarChart
   },
   name: "Park",
   data() {
@@ -252,6 +257,12 @@ export default {
   width: 952px;
   height: 1168px;
   background: rgba(255, 255, 255, 0.05);
+}
+.fu-he-te-xing-chart{
+  display: inline-block;
+  width: 926px;
+  height: 300px;
+  margin: 40px 0 0 14px;
 }
 .she-bei-tuo-pu{
   position: absolute;

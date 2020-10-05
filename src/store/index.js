@@ -939,9 +939,370 @@ const state = {
         }
     }],
     park: [{
-        name:"江苏扬州化学工业园区",
-        brief:["2003年10月,扬州、仪征两级政府围绕江苏省纵深推进沿江开发、加快打造宁扬沿江化工产业带的战略部署,市县联动,合作开发,在扬州西南部沿江地带的仪征市境内全面启动了扬州化工园区建设.2006年5月,国家发改委正式批准设立省级扬州化工园区,是江苏省仅有的三家专业化工园区之一.经过10多年的开发建设,扬州化工园区区位优势逐步放大,自然禀赋日益彰显,生产要素加速集聚,产业特色更加鲜明,发展空间不断拓展,未来前景更为广阔.",
+        name: "江苏扬州化学工业园区",
+        brief: ["2003年10月,扬州、仪征两级政府围绕江苏省纵深推进沿江开发、加快打造宁扬沿江化工产业带的战略部署,市县联动,合作开发,在扬州西南部沿江地带的仪征市境内全面启动了扬州化工园区建设.2006年5月,国家发改委正式批准设立省级扬州化工园区,是江苏省仅有的三家专业化工园区之一.经过10多年的开发建设,扬州化工园区区位优势逐步放大,自然禀赋日益彰显,生产要素加速集聚,产业特色更加鲜明,发展空间不断拓展,未来前景更为广阔.",
             "扬州化工园区区位条件优越、交通运输便捷.在国家实施的《长江三角洲地区区域规划》中,扬州是沿江和沿运河两带中的重要城市,接受着上海、南京两大都市圈的辐射.扬州化工园区交通运输便捷.扬州化工园区产业特色鲜明.区内集聚了中石化仪征化纤、中石油昆仑天然气、中化国际、中国华电集团、美国普莱克斯、英国博纳、日本东丽、住友精化、大洋日酸、韩国锦湖韩亚、新加坡凯发集团、台湾远东集团、东联化学、大连化工、香港建滔集团、珠海恒基达鑫、辽宁奥克化学、江苏扬农集团等一批境内外知名的石化大企业,初步形成了以烯烃、芳烃、盐化工为龙头,石油化工、精细化工、化工新材料、石化物流等四大产业集聚发展的态势.特别是石化物流业发展迅速,目前,区内投产、在建储罐250万立方米,总罐容位居江苏省沿江各港口第一,获批保税储罐50.3万立方米.扬州长江石化物流中心分别被江苏省发改委、经信委命名为“江苏省现代服务业集聚区”、 “江苏省重点物流基地”,中心内扬州长江石化交易市场拥有完备的电子交易平台,已有30多家贸易公司进驻."],
+        fuHeLineData: [{
+            id:0,
+            option:{
+                title: {
+                    text:"逐时电负荷特征系数",
+                    textStyle:{
+                        color:"#6DE5FF",
+                        fontSize: 24,
+                        fontWeight: 'normal',
+                    },
+                    textAlign:'center',
+                    left: '50%',
+                },
+                grid:{
+                    y: 60,
+                    x2: 60
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: true,
+                    data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+                    13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+                    axisLine:{
+                        show:false
+                    },
+                    axisTick: {
+                        show:false
+                    },
+                    offset: 16
+                },
+                yAxis: {
+                    type: 'value',
+                    boundaryGap: false,
+                    max:1.0,
+                    axisLabel: {
+                        formatter: function (v) {
+                            return v.toFixed(1)//表示整数.其他数值类型以此类推                                    }
+                        }
+                    },
+                    axisLine:{
+                        show:false
+                    },
+                    axisTick: {
+                        show:false
+                    },
+                    splitLine :{    //网格线
+                        lineStyle:{
+                            type:'dashed',    //设置网格线类型 dotted:虚线   solid:实线
+                            color:'rgba(255, 255, 255, 0.15)'
+                        },
+                        show:true //隐藏或显示
+                    },
+                    offset: 12
+                },
+                textStyle: {
+                    color: "rgba(255, 255, 255, 0.65)",
+                    fontFamily: "PingFangSC-Semibold",
+                    fontSize:14
+                },
+                series: [
+                    {
+                        showSymbol: false,
+                        type: 'line',
+                        data: [0.56, 0.56, 0.57, 0.58, 0.6, 0.65, 0.68, 0.74, 0.77, 0.79, 0.8, 0.78,
+                            0.77, 0.79, 0.8, 0.81, 0.79, 0.77, 0.72, 0.67, 0.63, 0.6, 0.57, 0.56],
+                        lineStyle: {        // 系列级个性化折线样式
+                            width: 2,
+                            type: 'solid',
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: '#52FFEA'
+                            }, {
+                                offset: 1,
+                                color: '#20A0FF'
+                            }]),//线条渐变色
+                        },
+                        areaStyle:{
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(82,255,234,0.28)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(32,160,255,0)'
+                            }]),
+                        }
+                    }
+                ]
+            }
+        }, {
+            id: 1,
+            option: {
+                title: {
+                    text: "逐时热负荷特征系数",
+                    textStyle: {
+                        color: "#6DE5FF",
+                        fontSize: 24,
+                        fontWeight: 'normal',
+                    },
+                    textAlign: 'center',
+                    left: '50%',
+                },
+                grid: {
+                    y: 60,
+                    x2: 60
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: true,
+                    data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+                        13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    offset: 16
+                },
+                yAxis: {
+                    type: 'value',
+                    boundaryGap: false,
+                    max: 1.0,
+                    axisLabel: {
+                        formatter: function (v) {
+                            return v.toFixed(1)//表示整数.其他数值类型以此类推                                    }
+                        }
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {    //网格线
+                        lineStyle: {
+                            type: 'dashed',    //设置网格线类型 dotted:虚线   solid:实线
+                            color: 'rgba(255, 255, 255, 0.15)'
+                        },
+                        show: true //隐藏或显示
+                    },
+                    offset: 12
+                },
+                textStyle: {
+                    color: "rgba(255, 255, 255, 0.65)",
+                    fontFamily: "PingFangSC-Semibold",
+                    fontSize: 14
+                },
+                series: [
+                    {
+                        showSymbol: false,
+                        type: 'line',
+                        data: [0.09, 0.09, 0.1, 0.1, 0.12, 0.15, 0.38, 0.54, 0.57, 0.58, 0.59, 0.59,
+                            0.57, 0.52, 0.45, 0.43, 0.39, 0.37, 0.37, 0.36, 0.3, 0.26, 0.21, 0.09
+                        ],
+                        lineStyle: {        // 系列级个性化折线样式
+                            width: 2,
+                            type: 'solid',
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: '#52FFEA'
+                            }, {
+                                offset: 1,
+                                color: '#20A0FF'
+                            }]),//线条渐变色
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(82,255,234,0.28)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(32,160,255,0)'
+                            }]),
+                        }
+                    }
+                ]
+            }
+        }, {
+            id: 2,
+            option: {
+                title: {
+                    text: "逐时冷负荷特征系数",
+                    textStyle: {
+                        color: "#6DE5FF",
+                        fontSize: 24,
+                        fontWeight: 'normal',
+                    },
+                    textAlign: 'center',
+                    left: '50%',
+                },
+                grid: {
+                    y: 60,
+                    x2: 60
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: true,
+                    data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+                        13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    offset: 16
+                },
+                yAxis: {
+                    type: 'value',
+                    boundaryGap: false,
+                    max: 1.0,
+                    axisLabel: {
+                        formatter: function (v) {
+                            return v.toFixed(1)//表示整数.其他数值类型以此类推                                    }
+                        }
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {    //网格线
+                        lineStyle: {
+                            type: 'dashed',    //设置网格线类型 dotted:虚线   solid:实线
+                            color: 'rgba(255, 255, 255, 0.15)'
+                        },
+                        show: true //隐藏或显示
+                    },
+                    offset: 12
+                },
+                textStyle: {
+                    color: "rgba(255, 255, 255, 0.65)",
+                    fontFamily: "PingFangSC-Semibold",
+                    fontSize: 14
+                },
+                series: [
+                    {
+                        showSymbol: false,
+                        type: 'line',
+                        data: [0.12, 0.11, 0.1, 0.1, 0.1, 0.11, 0.13, 0.2, 0.25, 0.3, 0.36, 0.4,
+                            0.47, 0.49, 0.5, 0.48, 0.43, 0.35, 0.26, 0.24, 0.2, 0.14, 0.12, 0.1
+                        ],
+                        lineStyle: {        // 系列级个性化折线样式
+                            width: 2,
+                            type: 'solid',
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: '#52FFEA'
+                            }, {
+                                offset: 1,
+                                color: '#20A0FF'
+                            }]),//线条渐变色
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(82,255,234,0.28)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(32,160,255,0)'
+                            }]),
+                        }
+                    }
+                ]
+            }
+        }],
+        nengHaoData:{
+            barData:{
+                id:0,
+                option: {
+                    title: {
+                        text:"用电逐项能耗(kwh)",
+                        textStyle:{
+                            color:"#6DE5FF",
+                            fontSize: 24,
+                            fontWeight: 'normal',
+                        },
+                        textAlign:'center',
+                        left: '50%',
+                        top: 56,
+                    },
+                    grid:{
+                        y:144,
+                        y2:96,
+                        x: 100,
+                        x2:0
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: true,
+                        data: ['照明', '空调机组', '冷热源机房', '电梯', '工业用电', '动力及消防'],
+                        axisLine:{
+                            show:false
+                        },
+                        axisTick: {
+                            show:false
+                        },
+                        offset: 18
+                    },
+                    yAxis: {
+                        type: 'value',
+                        boundaryGap: false,
+                        axisLine:{
+                            show:false
+                        },
+                        axisTick: {
+                            show:false
+                        },
+                        splitLine :{    //网格线
+                            lineStyle:{
+                                type:'dashed',    //设置网格线类型 dotted:虚线   solid:实线
+                                color:'rgba(255, 255, 255, 0.15)'
+                            },
+                            show:true //隐藏或显示
+                        },
+                        offset: 12
+                    },
+                    textStyle: {
+                        color: "rgba(255, 255, 255, 0.65)",
+                        fontFamily: "PingFangSC-Semibold",
+                        fontSize:10
+                    },
+                    series: [
+                        {
+                            type: 'bar',
+                            data: [3428910,	5918208, 10510305, 715000, 15001612,    4125300
+                            ],
+                            itemStyle: {        // 系列级个性化折线样式
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                    offset: 0,
+                                    color: '#52FFEA'
+                                }, {
+                                    offset: 1,
+                                    color: '#20A0FF'
+                                }]),//线条渐变色
+                            },
+                            barWidth: 24
+                        }
+                    ]
+                }
+            },
+            pieData:{
+                id:0,
+                option:{
+
+                }
+            }
+        }
     },{
         name:"扬州西区新城电子商务创意园区",
         brief: ["扬州西区新城电子商务创意产业园,是由扬州市邗江区与江苏利行文化发展有限责任公司联手打造的集电子商务与文化创意为一体的综合性专业园区.园区总规划办公面积15万㎡,仓储面积45万㎡,拟通过5年左右的时间,打造苏中地区电子商务运营及服务区域中心和江苏省电子商务创业孵化基地.一期办公面积1.5万㎡,仓储面积3.5万㎡,入驻企业30家左右,园区交易额平均达到3亿元/年,初步形成先发优势,打造扬州市电子商务产业先导区、示范区.",
