@@ -1,10 +1,10 @@
 <template>
-  <div :id="`nengHaoBarChart${barData.id}`" class="nengHaoBarChart" />
+  <div :id="`fangAnBarChart${barData.id}`" class="fangAnBarChart" />
 </template>
 
 <script>
 export default {
-  name: "NengHaoBarChart",
+  name: "FangAnBarChart",
   props: {
     barData: {
       type: Object,
@@ -17,7 +17,7 @@ export default {
   methods:{
     drawLine(){
       // 基于准备好的dom，初始化echarts实例
-      let myChart = this.$echarts.init(document.getElementById(`nengHaoBarChart${this.barData.id}`))
+      let myChart = this.$echarts.init(document.getElementById(`fangAnBarChart${this.barData.id}`))
       // 绘制图表
       myChart.setOption(this.barData.option);
     }
@@ -26,9 +26,9 @@ export default {
 </script>
 
 <style scoped>
-.nengHaoBarChart{
-  width: 484px;
-  height: 411px;
+.fangAnBarChart{
+  width: 490px;
+  height: 301px;
   display: inline-block;
 }
 </style>

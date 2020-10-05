@@ -8,7 +8,7 @@
       <div class="panel-title"><span class="panel-title-text">园区能耗分析</span></div>
       <div class="panel-body neng-hao-body">
         <neng-hao-bar-chart :bar-data="parkData.nengHaoData.barData"/>
-        <div :id="`yong-dian-zhu-xiang-pie${id}`" class="yong-dian-zhu-xiang-pie"/>
+        <neng-hao-pie-chart :pie-data="parkData.nengHaoData.pieData"/>
       </div>
     </div>
     <div class="fu-he-te-xing">
@@ -48,13 +48,49 @@
     </div>
     <p class="fang-an-dui-bi-text">方案对比</p>
     <div class="fang-an-dui-bi">
-
+      <fang-an-bar-chart :bar-data="parkData.fangAnData.barData[0]"/>
+      <fang-an-bar-chart :bar-data="parkData.fangAnData.barData[1]"/>
+      <div class="fang-an-radar-wrapper">
+        <p class="fang-an-radar-title">系统设备分类投资</p>
+        <fang-an-radar :radar-data="parkData.fangAnData.radarData[0]"/>
+      </div>
     </div>
     <div class="yun-xing-qu-xian">
       <div class="panel-title"><span class="panel-title-text">系统设备运行曲线对比</span></div>
       <div class="panel-body yun-xing-body">
         <div class="an-niu-panel">
-
+          <div class="an-niu-wrapper">
+              <div class="button" :class="{'clicked' : buttonClicked===0}" v-on:click="clickXia">夏季</div>
+              <div class="button" :class="{'clicked' : buttonClicked===1}" v-on:click="clickDong">冬季</div>
+              <div class="button" :class="{'clicked' : buttonClicked===2}" v-on:click="clickGuoDu">过渡季</div>
+          </div>
+          <div class="leng-re-wrapper chart-wrapper">
+            <div class="button-panel le-re" v-if="buttonClicked===2">
+              <div class="button" :class="{'clicked' : leReClicked===0}" v-on:click="clickLeng">冷系统</div>
+              <div class="button" :class="{'clicked' : leReClicked===1}" v-on:click="clickRe">热系统</div>
+            </div>
+            <div class="button-panel dian" v-if="buttonClicked===0">
+              <div class="button clicked">冷系统</div>
+            </div>
+            <div class="button-panel dian" v-if="buttonClicked===1">
+              <div class="button clicked">热系统</div>
+            </div>
+            <div class="yun-xing-chart-wrapper" :key="buttonClicked + leReClicked">
+              <yun-xing-bar-chart :line-data="leReData[0]" />
+              <yun-xing-bar-chart :line-data="leReData[1]" />
+              <yun-xing-bar-chart :line-data="leReData[2]" />
+            </div>
+          </div>
+          <div class="dian-wrapper chart-wrapper">
+            <div class="button-panel dian">
+              <div class="button clicked">电系统</div>
+            </div>
+            <div class="yun-xing-chart-wrapper" :key="buttonClicked">
+              <yun-xing-bar-chart :line-data="yunXingData.dian[0]" />
+              <yun-xing-bar-chart :line-data="yunXingData.dian[1]" />
+              <yun-xing-bar-chart :line-data="yunXingData.dian[2]" />
+            </div>
+          </div>
         </div>
         <div class="zong-jie-panel">
           <p class="zong-jie-title">系统运行情况总结</p>
@@ -67,16 +103,24 @@
             <span class="tu-li-label" >方案3(经济环保均衡)</span>
           </div>
           <div class="zong-jie-chart">
-
+            <zong-jie-bar-chart :bar-data="parkData.yunXingData.zongJieData[0]"/>
+            <zong-jie-bar-chart :bar-data="parkData.yunXingData.zongJieData[1]"/>
+            <zong-jie-bar-chart :bar-data="parkData.yunXingData.zongJieData[2]"/>
           </div>
         </div>
       </div>
     </div>
     <div class="huan-bao-table">
       <p class="huan-bao-text">环保性对比</p>
+      <div class="huan-bao-table-wrapper">
+        <huan-bao-table :table-data="parkData.fangAnData.tableData"/>
+      </div>
     </div>
     <div class="huan-bao-chart">
-      <p class="huan-bao-text">环保性对比</p>
+      <p class="huan-bao-text">方案总对比</p>
+      <div class="huan-bao-radar-wrapper">
+        <fang-an-radar :radar-data="parkData.fangAnData.radarData[1]"/>
+      </div>
     </div>
   </div>
 </template>
@@ -84,24 +128,40 @@
 <script>
 import FuHeLineChart from "@/components/park/FuHeLineChart";
 import NengHaoBarChart from "@/components/park/NengHaoBarChart";
+import NengHaoPieChart from "@/components/park/NengHaoPieChart";
+import FangAnBarChart from "@/components/park/FangAnBarChart";
+import FangAnRadar from "@/components/park/FangAnRadar";
+import HuanBaoTable from "@/components/park/HuanBaoTable";
+import ZongJieBarChart from "@/components/park/ZongJieBarChart";
+import YunXingBarChart from "@/components/park/YunXingBarChart";
 
 export default {
   components:{
     FuHeLineChart,
-    NengHaoBarChart
+    NengHaoBarChart,
+    NengHaoPieChart,
+    FangAnBarChart,
+    FangAnRadar,
+    HuanBaoTable,
+    ZongJieBarChart,
+    YunXingBarChart
   },
   name: "Park",
   data() {
     return {
       id: 999,
       parkData:{},
+      yunXingData:{},
+      leReData:[],
       classObject:{
         background0:true,
         background1:false,
         background2:false,
         background3:false,
         background4:false
-      }
+      },
+      buttonClicked: 0,
+      leReClicked:0
     }
   },
   created() {
@@ -157,6 +217,31 @@ export default {
           break;
         default: this.parkData = this.$store.state.park[0];
       }
+      this.yunXingData = this.parkData.yunXingData.xia;
+      this.leReData = this.yunXingData.leng;
+    },
+    clickXia(){
+      this.buttonClicked = 0;
+      this.yunXingData = this.parkData.yunXingData.xia;
+      this.clickLeng()
+    },
+    clickDong(){
+      this.buttonClicked = 1;
+      this.yunXingData = this.parkData.yunXingData.dong;
+      this.clickRe()
+    },
+    clickGuoDu(){
+      this.buttonClicked = 2;
+      this.yunXingData = this.parkData.yunXingData.guoDu;
+      this.clickLeng()
+    },
+    clickLeng(){
+      this.leReClicked = 0;
+      this.leReData = this.yunXingData.leng;
+    },
+    clickRe(){
+      this.leReClicked = 1;
+      this.leReData = this.yunXingData.re;
     }
   }
 }
@@ -353,6 +438,24 @@ export default {
   background: rgba(255, 255, 255, 0.05);
   border: 6px solid rgba(33, 160, 253, 0.1);
 }
+.fang-an-radar-wrapper{
+  display: inline-block;
+  width: 837px;
+  height: 301px;
+  position: absolute;
+}
+.fang-an-radar-title{
+  text-align: center;
+  width: 837px;
+  height: 33px;
+  margin:40px 0 0;
+  font-size: 24px;
+  font-family: PingFangSC-Regular, PingFang SC, serif;
+  font-weight: 400;
+  color: #86F4FF;
+  line-height: 33px;
+  display: inline-block;
+}
 .yun-xing-qu-xian{
   position: absolute;
   left: 4225px;
@@ -371,6 +474,71 @@ export default {
   margin: 36px 30px;
   display: inline-block;
   background: rgba(134, 244, 255, 0.05);
+}
+.an-niu-wrapper{
+  height: 60px;
+  width: 678px;
+  margin: 41px 734px 41px 694px;
+}
+.an-niu-wrapper .button{
+  display: inline-block;
+  width: 182px;
+  height: 60px;
+  border: 2px solid;
+  border-image: linear-gradient(180deg, rgba(82, 255, 234, 1), rgba(32, 160, 255, 1)) 2 2;
+  text-align: center;
+  font-size: 24px;
+  font-family: PingFangSC-Regular, PingFang SC, serif;
+  font-weight: 400;
+  color: #6DE5FF;
+  line-height: 60px;
+  margin-right: 40px;
+}
+.an-niu-wrapper .clicked{
+  background: linear-gradient(180deg, #52FFEA 0%, #20A0FF 100%);
+  color: #FFF;
+  font-weight: 600;
+}
+.an-niu-panel .chart-wrapper{
+  width: 2010px;
+  height: 295px;
+  margin: 0 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.button-panel {
+  display: inline-block;
+  width: 187px;
+  text-align: center;
+  position: absolute;
+}
+.yun-xing-chart-wrapper{
+  margin-left: 252px;
+}
+.le-re{
+  height: 105px;
+  margin: 95px 65px;
+}
+.dian{
+  height: 53px;
+  margin: 121px 65px;
+}
+.button-panel .button{
+  width: 120px;
+  height: 48px;
+  opacity: 0.6;
+  line-height: 48px;
+  font-size: 20px;
+  font-family: PingFangSC-Regular, PingFang SC, serif;
+  font-weight: 400;
+  color: #6DE5FF;
+  border: 2px solid;
+  border-image: linear-gradient(180deg, rgba(82, 255, 234, 1), rgba(32, 160, 255, 1)) 2 2;
+}
+.button-panel .clicked{
+  opacity: 1;
+  background: linear-gradient(180deg, #52FFEA 0%, #20A0FF 100%);
+  font-weight: 600;
+  color: #FFFFFF;
 }
 .zong-jie-panel{
   width: 2106px;
@@ -427,6 +595,20 @@ export default {
   height: 313px;
   background: rgba(255, 255, 255, 0.05);
   border: 6px solid rgba(33, 160, 253, 0.1);
+}
+.huan-bao-radar-wrapper{
+  position: absolute;
+  left: 99px;
+  top: 68px;
+  width: 837px;
+  height: 234px;
+}
+.huan-bao-table-wrapper{
+  position: absolute;
+  left: 44px;
+  top: 68px;
+  width: 960px;
+  height: 200px;
 }
 .rectan{
   display: inline-block;

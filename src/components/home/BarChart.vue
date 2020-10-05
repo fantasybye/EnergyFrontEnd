@@ -1,5 +1,5 @@
 <template>
-  <div :id="`myBatChart${barData.id}`" class="myBarChart" />
+  <div :id="`myBarChart${barData.id}`" class="myBarChart" />
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
   methods:{
     drawLine(){
       // 基于准备好的dom，初始化echarts实例
-      let myChart = this.$echarts.init(document.getElementById(`myBatChart${this.barData.id}`))
+      let myChart = this.$echarts.init(document.getElementById(`myBarChart${this.barData.id}`))
       // 绘制图表
       myChart.setOption(this.barData.option);
     }
