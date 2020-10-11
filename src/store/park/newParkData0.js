@@ -648,7 +648,7 @@ const newParkData0 = {
                                 color: '#7F56FC'
                             }, {
                                 offset: 1,
-                                color: '#    #3E42CC'
+                                color: '#3E42CC'
                             }]),//线条渐变色
                         },
                         barWidth: 24
