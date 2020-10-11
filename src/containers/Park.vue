@@ -215,6 +215,15 @@ export default {
           this.classObject.background4=true;
           this.parkData = this.$store.state.park[4];
           break;
+        case '5':
+          this.id=0;
+          this.classObject.background0=true;
+          this.classObject.background1=false;
+          this.classObject.background2=false;
+          this.classObject.background3=false;
+          this.classObject.background4=false;
+          this.parkData = this.$store.state.park[5];
+          break;
         default: this.parkData = this.$store.state.park[0];
       }
       this.yunXingData = this.parkData.yunXingData.xia;
@@ -407,6 +416,7 @@ export default {
 }
 .brief-img{
   width: 1830px;
+  height: 874px;
   position: absolute;
   top: 372px;
   bottom: 0;
