@@ -1,5 +1,5 @@
 <template>
-  <div class="park-wrapper">
+  <div class="park-wrapper" v-if="show">
     <div class="park-title">
       <p class="park-title-text">{{ parkData.name }}</p>
     </div>
@@ -123,8 +123,27 @@
       </div>
     </div>
   </div>
+  <div class="load-wrapper" v-else>
+    <div class="new-intro">
+      <div class="intro-text">
+        <div class="intro-text-title"><div>{{ parkData.newQiYeData.text.title }}</div></div>
+        <ul>
+          <li v-for="item in parkData.newQiYeData.text.body" :key="item">
+            <div class="intro-text-body">
+              <span class="intro-text-rect"/>
+              <p class="intro-text-li">{{ item }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <new-line-chart :line-data="parkData.newQiYeData.chart"/>
+    </div>
+    <div class="loading">
+      <a-spin :indicator="indicator"/>
+    </div>
+    <div class="spin-content">数据加载中...</div>
+  </div>
 </template>
-
 <script>
 import FuHeLineChart from "@/components/park/FuHeLineChart";
 import NengHaoBarChart from "@/components/park/NengHaoBarChart";
@@ -134,6 +153,7 @@ import FangAnRadar from "@/components/park/FangAnRadar";
 import HuanBaoTable from "@/components/park/HuanBaoTable";
 import ZongJieBarChart from "@/components/park/ZongJieBarChart";
 import YunXingBarChart from "@/components/park/YunXingBarChart";
+import newLineChart from '@/components/park/newLineChart';
 
 export default {
   components:{
@@ -144,7 +164,8 @@ export default {
     FangAnRadar,
     HuanBaoTable,
     ZongJieBarChart,
-    YunXingBarChart
+    YunXingBarChart,
+    newLineChart
   },
   name: "Park",
   data() {
@@ -161,14 +182,17 @@ export default {
         background4:false
       },
       buttonClicked: 0,
-      leReClicked:0
+      leReClicked:0,
+      show: true,
+      indicator: <i class="loading-spin anticon anticon-loading anticon-spin ant-spin-dot"/>,
     }
   },
   created() {
-    this.fetchData()
+    this.fetchData();
   },
   methods: {
     fetchData(){
+      let count = 0;
       switch (this.$route.query.id){
         case '0':
           this.id=0;
@@ -215,7 +239,7 @@ export default {
           this.classObject.background4=true;
           this.parkData = this.$store.state.park[4];
           break;
-        case '5':
+        case 'add':
           this.id=0;
           this.classObject.background0=true;
           this.classObject.background1=false;
@@ -223,11 +247,22 @@ export default {
           this.classObject.background3=false;
           this.classObject.background4=false;
           this.parkData = this.$store.state.park[5];
+          this.show=false;
+          setTimeout(() => {this.show = true}, 5000)
           break;
         default: this.parkData = this.$store.state.park[0];
       }
       this.yunXingData = this.parkData.yunXingData.xia;
       this.leReData = this.yunXingData.leng;
+      setInterval(() => {
+          switch (count%3){
+            case 0: this.clickXia();break;
+            case 1: this.clickDong();break;
+            case 2: this.clickGuoDu();break;
+            default:break;
+          }
+          count++;
+      }, 5000)
     },
     clickXia(){
       this.buttonClicked = 0;
@@ -263,6 +298,95 @@ export default {
   padding: 0;
   margin: 0;
   background: url("../assets/home/background.png");
+}
+.load-wrapper{
+  width: 6508px;
+  height: 1940px;
+  padding: 0;
+  margin: 0;
+  background: #060C25;
+}
+.new-intro{
+  position: absolute;
+  top: 320px;
+  left: 2550px;
+  width: 1408px;
+  height: 1129px;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.intro-text{
+  width: 1406px;
+  height: 520px;
+  padding-top: 50px;
+}
+.intro-text ul{
+  margin-top: 60px;
+}
+.intro-text-title{
+  text-align: center;
+}
+.intro-text-title div{
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 8px;
+  width: 288px;
+  height: 62px;
+  font-size: 44px;
+  font-family: PingFangSC-Semibold, PingFang SC,serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 62px;
+  border-bottom: 8px  solid #09FBFF;
+  border-image: -webkit-linear-gradient(#09FBFF, #1899FF) 100 0;
+  border-image: -moz-linear-gradient(#09FBFF, #1899FF) 100 0;
+  border-image: linear-gradient(#09FBFF, #1899FF) 100 0;
+}
+.intro-text-body{
+  width: 1242px;
+  margin: 48px 75px 0;
+  font-weight: 400;
+}
+.intro-text-rect{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(180deg, #09FBFF 0%, #1899FF 100%);
+}
+.intro-text-li{
+  padding-left: 36px;
+  margin-top: -34px;
+  line-height: 40px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-family: PingFangSC-Semibold, PingFang SC, serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+.loading{
+  position: absolute;
+  top: 1497px;
+  left: 3159px;
+  width: 32px;
+  height: 32px;
+}
+.loading-spin{
+  width: 32px;
+  height: 32px;
+  background: url("../assets/park/loading.png");
+}
+.spin-content{
+  position: absolute;
+  top: 1497px;
+  left: 3206px;
+  width: 160px;
+  height: 33px;
+  font-size: 24px;
+  font-family: PingFangSC-Medium, PingFang SC, serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 33px;
 }
 .park-title {
   display: inline-block;
@@ -458,7 +582,7 @@ export default {
   text-align: center;
   width: 837px;
   height: 33px;
-  margin:40px 0 0;
+  margin:40px 0 10px;
   font-size: 24px;
   font-family: PingFangSC-Regular, PingFang SC, serif;
   font-weight: 400;

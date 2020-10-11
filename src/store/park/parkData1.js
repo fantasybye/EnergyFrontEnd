@@ -1,5 +1,6 @@
 import echarts from "echarts";
 
+const nengHaoData = [5448788,7998908, 10510305, 715000, 15001612,4125300];
 const fuHeLineData = [
     [0.56, 0.56, 0.57, 0.58, 0.6, 0.65, 0.68, 0.74, 0.77, 0.79, 0.8, 0.78,
     0.77, 0.79, 0.8, 0.81, 0.79, 0.77, 0.72, 0.67, 0.63, 0.6, 0.57, 0.56],
@@ -8,22 +9,9 @@ const fuHeLineData = [
     [0.12, 0.11, 0.1, 0.1, 0.1, 0.11, 0.13, 0.2, 0.25, 0.3, 0.36, 0.4,
     0.47, 0.49, 0.5, 0.48, 0.43, 0.35, 0.26, 0.24, 0.2, 0.14, 0.12, 0.1]
 ]
-const nengHaoData = {
-    bar:[
-        [5448788,	7998908, 10510305, 715000, 15001612,4125300],
-    ],
-    pie:[[
-        {value: 5448788, name: '照明'},
-        {value: 7998908, name: '空调机组'},
-        {value: 8316095, name: '冷热源机房'},
-        {value: 715000, name: '电梯'},
-        {value: 15001612, name: '工业用电'},
-        {value: 4125300, name: '动力及消防'},
-    ],],
-}
-
 const fangAnData = {
-    bar:[[1980, 1660, 1730],[10.43, 14.22, 11.23]]
+    bar:[[1750, 1430, 1620],[8.75, 10.83, 11.33]],
+    newBar:[[1487.5,1215.5,1377],[7.875, 9.75, 10.20]],
 }
 
 const parkData1 = {
@@ -369,7 +357,7 @@ const parkData1 = {
                 series: [
                     {
                         type: 'bar',
-                        data: nengHaoData.bar[0],
+                        data: nengHaoData,
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -441,7 +429,14 @@ const parkData1 = {
                         labelLine: {
                             show: false
                         },
-                        data: nengHaoData.pie[0],
+                        data: [
+                            {value: 5448788, name: '照明'},
+                            {value: 7998908, name: '空调机组'},
+                            {value: 8316095, name: '冷热源机房'},
+                            {value: 715000, name: '电梯'},
+                            {value: 15001612, name: '工业用电'},
+                            {value: 4125300, name: '动力及消防'},
+                        ],
                         center: [190, 230]
                     }
                 ]
