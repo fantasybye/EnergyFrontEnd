@@ -250,6 +250,17 @@ export default {
           this.show=false;
           setTimeout(() => {this.show = true}, 5000)
           break;
+        case 'stop':
+          this.id=1;
+          this.classObject.background0=false;
+          this.classObject.background1=true;
+          this.classObject.background2=false;
+          this.classObject.background3=false;
+          this.classObject.background4=false;
+          this.parkData = this.$store.state.park[6];
+          this.show=false;
+          setTimeout(() => {this.show = true}, 5000)
+          break;
         default: this.parkData = this.$store.state.park[0];
       }
       this.yunXingData = this.parkData.yunXingData.xia;

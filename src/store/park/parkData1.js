@@ -12,7 +12,21 @@ const fuHeLineData = [
 const fangAnData = {
     bar:[[1750, 1430, 1620],[8.75, 10.83, 11.33]],
     newBar:[[1487.5,1215.5,1377],[7.875, 9.75, 10.20]],
+    fenlei: {
+        radar: [[200,350,200,100,700,200], [300, 800, 200, 130], [270,350,200,100,700]],
+        newRadar: [[170,297.5,170,85,595,170], [255, 680, 170, 111], [229.5,297.5,170,85,595]]
+    },
+    zong: {
+        radar: [[3,3,5,4,5], [4,5,4,5,4], [4,4,4,4,5]],
+        newRadar: [[2,3,5,4,4], [3,4,4,4,4], [4,3,3,5,4]]
+    }
 }
+const tableData =[
+    [0.0225,0.0186,0.0198,0.0173,0.005,0.129],
+    [0.1675,0.016,0.1521,0.012,0.1912,0.016],
+    [0.0079,0.0106,0.0076,0.0072,0.0074,0.0077],
+    [0.0043,0.0096,0.0036,0.0065,0.0034,0.0092]
+];
 
 const parkData1 = {
     name:"扬州西区新城电子商务创意园区",
@@ -615,12 +629,12 @@ const parkData1 = {
                 radar: [
                     {
                         indicator: [
-                            {text: '综合能效服务', max: 800},
-                            {text: '分布式清洁能源服务', max: 800},
-                            {text: '专属电动汽车', max: 800},
-                            {text: '商业模式', max: 800},
-                            {text: '供冷供热供电多能服务',max: 800},
-                            {text: '能源技术', max: 800}
+                            {text: '综合能效服务', max: 1000},
+                            {text: '分布式清洁能源服务', max: 1000},
+                            {text: '专属电动汽车', max: 1000},
+                            {text: '商业模式', max: 1000},
+                            {text: '供冷供热供电多能服务',max: 1000},
+                            {text: '能源技术', max: 1000}
                         ],
                         center: ['17%', '50%'],
                         shape: 'circle',
@@ -696,7 +710,7 @@ const parkData1 = {
                         areaStyle: {},
                         data: [
                             {
-                                value: [250, 300, 230, 100, 600, 250],
+                                value: fangAnData.fenlei.radar[0],
                                 name: '方案一'
                             }
                         ]
@@ -707,7 +721,7 @@ const parkData1 = {
                         areaStyle: {},
                         data: [
                             {
-                                value: [300, 750, 250, 200],
+                                value: fangAnData.fenlei.radar[1],
                                 name: '方案二'
                             },
                         ]
@@ -719,7 +733,7 @@ const parkData1 = {
                         data: [
                             {
                                 name: '方案三',
-                                value: [280, 320, 350, 120, 650],
+                                value: fangAnData.fenlei.radar[2],
                             }
                         ]
                     }
@@ -819,7 +833,7 @@ const parkData1 = {
                         areaStyle: {},
                         data: [
                             {
-                                value: [5,4,5,4,5],
+                                value: fangAnData.zong.radar[0],
                                 name: '方案一'
                             }
                         ]
@@ -830,7 +844,7 @@ const parkData1 = {
                         areaStyle: {},
                         data: [
                             {
-                                value: [3,3,4,4,4],
+                                value: fangAnData.zong.radar[1],
                                 name: '方案二'
                             },
                         ]
@@ -842,18 +856,13 @@ const parkData1 = {
                         data: [
                             {
                                 name: '方案三',
-                                value: [4,4,4,4,5],
+                                value: fangAnData.zong.radar[2],
                             }
                         ]
                     }
                 ]}
         }],
-        tableData: [
-            [0.0225,0.0186,0.0198,0.0173,0.005,0.129],
-            [0.1675,0.016,0.1521,0.012,0.1912,0.016],
-            [0.0079,0.0106,0.0076,0.0072,0.0074,0.0077],
-            [0.0043,0.0096,0.0036,0.0065,0.0034,0.0092]
-        ],
+        tableData: tableData,
     },
     yunXingData: {
         zongJieData: [{
