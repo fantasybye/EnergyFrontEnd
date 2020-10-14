@@ -39,8 +39,8 @@
 </template>
 
 <script>
-import LineChart from "@/components/home/LineChart";
-import BarChart from "@/components/home/BarChart";
+import LineChart from "@/components/home/chart/LineChart";
+import BarChart from "@/components/home/chart/BarChart";
 export default {
   name: "HomePanel",
   components:{

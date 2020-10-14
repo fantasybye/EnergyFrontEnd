@@ -151,15 +151,15 @@
   </div>
 </template>
 <script>
-import FuHeLineChart from "@/components/park/FuHeLineChart";
-import NengHaoBarChart from "@/components/park/NengHaoBarChart";
+import FuHeLineChart from "@/components/park/line/FuHeLineChart";
+import NengHaoBarChart from "@/components/park/bar/NengHaoBarChart";
 import NengHaoPieChart from "@/components/park/NengHaoPieChart";
-import FangAnBarChart from "@/components/park/FangAnBarChart";
+import FangAnBarChart from "@/components/park/bar/FangAnBarChart";
 import FangAnRadar from "@/components/park/FangAnRadar";
 import HuanBaoTable from "@/components/park/HuanBaoTable";
-import ZongJieBarChart from "@/components/park/ZongJieBarChart";
-import YunXingBarChart from "@/components/park/YunXingBarChart";
-import newLineChart from '@/components/park/newLineChart';
+import ZongJieBarChart from "@/components/park/bar/ZongJieBarChart";
+import YunXingBarChart from "@/components/park/bar/YunXingBarChart";
+import newLineChart from '@/components/park/line/newLineChart';
 
 export default {
   components:{
@@ -437,19 +437,19 @@ export default {
   height: 60px;
 }
 .background0{
-  background: url("../assets/park/title0.png");
+  background: url("../assets/park/title/title0.png");
 }
 .background1{
-  background: url("../assets/park/title1.png");
+  background: url("../assets/park/title/title1.png");
 }
 .background2{
-  background: url("../assets/park/title2.png");
+  background: url("../assets/park/title/title2.png");
 }
 .background3{
-  background: url("../assets/park/title3.png");
+  background: url("../assets/park/title/title3.png");
 }
 .background4{
-  background: url("../assets/park/title4.png");
+  background: url("../assets/park/title/title4.png");
 }
 .panel-title {
   height: 88px;
