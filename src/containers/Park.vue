@@ -22,22 +22,27 @@
     <div class="she-bei-tuo-pu">
       <div class="panel-title"><span class="panel-title-text">设备连接拓扑对比</span></div>
       <div class="panel-body she-bei-body">
-        <div class="she-bei-fang-an fang-an-top">
+        <div class="fang-an-top">
+          <p class="fang-an-text top-text">现况描述</p>
+          <p class="miao-shu">{{ parkData.miaoShu[0] }}</p>
+          <p class="miao-shu">{{ parkData.miaoShu[1] }}</p>
+        </div>
+        <div class="she-bei-fang-an">
           <p class="fang-an-text">方案一</p>
           <div class="img-wrapper">
-            <img src="../assets/park/shebeifangan/fangan1.png" alt="">
+            <img :src="require(`../assets/park/shebeifangan/${this.id}/fangan1.png`)" alt="">
           </div>
         </div>
         <div class="she-bei-fang-an">
           <p class="fang-an-text">方案二</p>
           <div class="img-wrapper">
-            <img src="../assets/park/shebeifangan/fangan2.png" alt="">
+            <img :src="require(`../assets/park/shebeifangan/${this.id}/fangan2.png`)" alt="">
           </div>
         </div>
         <div class="she-bei-fang-an">
           <p class="fang-an-text">方案三</p>
           <div class="img-wrapper">
-            <img src="../assets/park/shebeifangan/fangan3.png" alt="">
+            <img :src="require(`../assets/park/shebeifangan/${this.id}/fangan3.png`)" alt="">
           </div>
         </div>
       </div>
@@ -240,18 +245,18 @@ export default {
           this.parkData = this.$store.state.park[4];
           break;
         case 'add':
-          this.id=0;
+          this.id=5;
           this.classObject.background0=true;
           this.classObject.background1=false;
           this.classObject.background2=false;
           this.classObject.background3=false;
           this.classObject.background4=false;
           this.parkData = this.$store.state.park[5];
-          this.show=false;
-          setTimeout(() => {this.show = true}, 5000)
+          this.show=true;
+          // setTimeout(() => {this.show = true}, 5000)
           break;
         case 'stop':
-          this.id=1;
+          this.id=6;
           this.classObject.background0=false;
           this.classObject.background1=true;
           this.classObject.background2=false;
@@ -506,25 +511,42 @@ export default {
   display: inline-block;
   background: rgba(255, 255, 255, 0.03);
   width: 1080px;
-  height: 486px;
+  height: 423px;
   margin: 31px 34px 0;
 }
 .she-bei-fang-an .img-wrapper{
-  width: 860px;
-  height: 350px;
-  margin: 0 110px;
+  width: 946px;
+  height: 330px;
+  margin: 0 56px;
 }
 .she-bei-fang-an img{
   width: 100%;
   height: 100%;
 }
 .fang-an-top{
-  margin-top: 48px;
+  width: 1080px;
+  height: 172px;
+  background: rgba(255, 255, 255, 0.03);
+  margin: 38px 34px 0;
+}
+.fang-an-top .top-text{
+  height: 44px;
+  padding-top: 16px;
+}
+.miao-shu{
+  width: 1016px;
+  height: 22px;
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 22px;
+  margin: 20px 34px;
 }
 .fang-an-text{
   width: 100%;
-  height: 80px;
-  line-height: 80px;
+  height: 68px;
+  padding-top: 35px;
   text-indent: 32px;
   margin-bottom: 0;
   font-size: 24px;
