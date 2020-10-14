@@ -1,6 +1,7 @@
 <template>
   <div class="park-wrapper" v-if="show">
     <div class="park-title">
+<!--      <div class="park-title-line" />-->
       <p class="park-title-text">{{ parkData.name }}</p>
     </div>
     <div class="park-header " :class="classObject"/>
@@ -253,7 +254,7 @@ export default {
           this.classObject.background4=false;
           this.parkData = this.$store.state.park[5];
           this.show=true;
-          // setTimeout(() => {this.show = true}, 5000)
+          setTimeout(() => {this.show = true}, 5000)
           break;
         case 'stop':
           this.id=6;
@@ -410,6 +411,14 @@ export default {
   height: 101px;
   text-align: center;
 }
+.park-title-line{
+  position: absolute;
+  display: block;
+  height: 5px;
+  background: linear-gradient(90deg, rgba(44,131,161,0.15) 0%, rgba(34,164,255,1) 50%, rgba(44,131,161,0.15) 100%);
+  top: 10px;
+  width: 6508px;
+}
 .park-title-text {
   display: inline-block;
   background: linear-gradient(180deg, #52FFEA 0%, #20A0FF 100%);
@@ -419,6 +428,8 @@ export default {
   font-size: 64px;
   font-family: PingFangSC-Semibold, PingFang SC, serif;
   font-weight: 700;
+  z-index: 2;
+  position: relative;
 }
 .park-header {
   margin-top: -23px;

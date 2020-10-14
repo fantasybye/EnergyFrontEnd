@@ -2,17 +2,17 @@ import echarts from "echarts";
 
 const homeData2 = {
     id: 2,
-    value: "扬州广陵船舶(重工)产业园",
+    value: "高邮风光产业园",
     text:[
-        "园区重点引进各类船舶、海洋工程配套项目、各类工程机械设备以及科技服务型、物流类项目,实现船舶制造专业化、规模化、系列化.“十二五”期末,船舶重工及配套产业产销规模冲击千亿,成为立足扬州、辐射长三角的重要船舶重工及配套产业基地之一.",
-        "基础设施完善、拥有多家重点企业、地理位置优越、物流网络四通八达、产业聚集、生态良好."
+        "锂电池产业、充电设备及配件生产、氢燃料应用、光伏发电、光伏电池组件。",
+        "基础设施完善、拥有多家重点企业、地理位置优越、物流网络四通八达、产业聚集、生态良好。"
     ],
     barChartData:{
         hasData:true,
         id:2,
         option: {
             title: {
-                text:"2012-2018年中国造船完工量(单位:万载重吨)",
+                text:"2010-2019年全球光伏组件产能增长情况",
                 textStyle:{
                     color:"#6DE5FF",
                     fontSize: 24,
@@ -37,7 +37,7 @@ const homeData2 = {
                     fontSize: 14,
                     color:'rgba(255, 255, 255, 0.65)'
                 },
-                data: [2013, 2014, 2015, 2016, 2017, 2018],
+                data: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019],
                 axisLine:{
                     show:false
                 },
@@ -49,7 +49,7 @@ const homeData2 = {
             yAxis: {
                 type: 'value',
                 boundaryGap: false,
-                name: '完工量',
+                name: '产能（GW）',
                 nameTextStyle:{
                     padding: [0, 35, 12, 0],
                     fontSize: 14,
@@ -78,7 +78,7 @@ const homeData2 = {
             series: [
                 {
                     type: 'bar',
-                    data: [4534, 3905, 4184, 3532, 4268, 3164],
+                    data: [49,70,80,78,90,99,120,150,180,218],
                     itemStyle: {        // 系列级个性化折线样式
                         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                             offset: 0,

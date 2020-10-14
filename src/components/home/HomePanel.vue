@@ -113,7 +113,7 @@ export default {
     letter-spacing: 1px;
   }
   .has-bar-text-wrapper {
-    height: 280px;
+    height: 320px;
   }
   .no-bar-text-wrapper {
     height: 780px;
