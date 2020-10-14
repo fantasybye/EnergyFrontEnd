@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="she-bei-tuo-pu">
-      <div class="panel-title"><span class="panel-title-text">设备连接拓扑对比</span></div>
+      <div class="panel-title"><span class="panel-title-text"> 园区配置方案</span></div>
       <div class="panel-body she-bei-body">
         <div class="fang-an-top">
           <p class="fang-an-text top-text">现况描述</p>
