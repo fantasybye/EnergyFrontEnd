@@ -29,19 +29,19 @@
           <p class="miao-shu">{{ parkData.miaoShu[1] }}</p>
         </div>
         <div class="she-bei-fang-an">
-          <p class="fang-an-text">方案一</p>
+          <p class="fang-an-text">经济性最优（方案一）</p>
           <div class="img-wrapper">
             <img :src="require(`../assets/park/shebeifangan/${this.id}/fangan1.png`)" alt="">
           </div>
         </div>
         <div class="she-bei-fang-an">
-          <p class="fang-an-text">方案二</p>
+          <p class="fang-an-text">环保性最优（方案二）</p>
           <div class="img-wrapper">
             <img :src="require(`../assets/park/shebeifangan/${this.id}/fangan2.png`)" alt="">
           </div>
         </div>
         <div class="she-bei-fang-an">
-          <p class="fang-an-text">方案三</p>
+          <p class="fang-an-text">经济环保均衡（方案三）</p>
           <div class="img-wrapper">
             <img :src="require(`../assets/park/shebeifangan/${this.id}/fangan3.png`)" alt="">
           </div>
