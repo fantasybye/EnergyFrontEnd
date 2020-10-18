@@ -495,7 +495,7 @@ const parkData2 = {
                 series: [
                     {
                         type: 'bar',
-                        data: [2800,2288,2592],
+                        data: [2188,2800,2592],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -573,7 +573,7 @@ const parkData2 = {
                 series: [
                     {
                         type: 'bar',
-                        data: [8.75 ,10.83 ,11.33],
+                        data: [10.43,14.22,11.23],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -602,12 +602,8 @@ const parkData2 = {
                 radar: [
                     {
                         indicator: [
-                            {text: '综合能效服务', max: 1500},
-                            {text: '分布式清洁能源服务', max: 1500},
-                            {text: '专属电动汽车', max: 1500},
-                            {text: '商业模式', max: 1500},
-                            {text: '供冷供热供电多能服务',max: 1500},
-                            {text: '能源技术', max: 1500}
+                            {text: '电能替代', max: 800},
+                            {text: '多能联供', max: 800},
                         ],
                         center: ['17%', '50%'],
                         shape: 'circle',
@@ -628,10 +624,8 @@ const parkData2 = {
                     },
                     {
                         indicator: [
-                            {text: '综合能效服务', max: 1500},
-                            {text: '供冷供热供电多能服务', max: 1500},
-                            {text: '专属电动汽车', max: 1500},
-                            {text: '商业模式', max: 1500},
+                            {text: '电能替代', max: 800},
+                            {text: '多能联供', max: 800},
                         ],
                         radius: 60,
                         startAngle: 135,
@@ -651,11 +645,8 @@ const parkData2 = {
                     },
                     {
                         indicator: [
-                            {text: '综合能效服务', max: 1000},
-                            {text: '分布式清洁能源服务', max: 1000},
-                            {text: '专属电动汽车', max: 1000},
-                            {text: '商业模式', max: 1000},
-                            {text: '供冷供热供电多能服务', max: 1000}
+                            {text: '电能替代', max: 800},
+                            {text: '多能联供', max: 800},
                         ],
                         center: ['83%', '50%'],
                         shape: 'circle',
@@ -683,7 +674,7 @@ const parkData2 = {
                         areaStyle: {},
                         data: [
                             {
-                                value: [320,560,320,160,1120,320],
+                                value: [360,650],
                                 name: '方案一'
                             }
                         ]
@@ -694,7 +685,7 @@ const parkData2 = {
                         areaStyle: {},
                         data: [
                             {
-                                value: [450,1200,300,195],
+                                value: [623,798],
                                 name: '方案二'
                             },
                         ]
@@ -706,7 +697,7 @@ const parkData2 = {
                         data: [
                             {
                                 name: '方案三',
-                                value: [351,455,260,130,910],
+                                value: [557,750],
                             }
                         ]
                     }

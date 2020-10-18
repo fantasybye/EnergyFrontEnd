@@ -3,6 +3,7 @@
     <ul class="home-panel-ul">
       <li class="home-panel-li" v-for="prop in propsData" v-bind:key="prop.id">
         <home-panel
+            :id = "prop.id"
             :name = "prop.value"
             :text-items="prop.text"
             :line-chart-data="prop.lineChartData"

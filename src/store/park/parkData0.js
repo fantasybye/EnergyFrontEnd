@@ -16,9 +16,9 @@ const fuHeData =[
 const fuHeLineData = fuHeLineDataGenerator(fuHeData);
 
 const fangAnDataSet = {
-    bar:[[1980, 1660, 1730],[10.43, 14.22, 11.23]],
+    bar:[[1230,1980,1730],[10.43,14.22,11.23]],
     fenlei: {
-        radar: [[250, 300, 230, 100, 600, 250], [300, 750, 250, 200], [280, 320, 350, 120, 650]]
+        radar: [[360,650,220], [623,798,559], [557,750,423]]
     },
     zong: {
         radar: [[5,4,5,4,5], [3,3,4,4,4], [4,4,4,4,5]]
@@ -34,9 +34,9 @@ const fangAnData = fangAnBarDataGenerator(fangAnDataSet, tableData);
 
 const yunXingDataSet = {
     zongJie:[
-        [[76, 80],[92, 72],[85, 73]],
-        [[85, 80],[88, 73],[76, 73]],
-        [[65, 84],[76, 69],[80, 79]]
+        [[0, 80],[92, 72],[85, 73]],
+        [[0, 80],[88, 73],[76, 73]],
+        [[0, 84],[76, 69],[80, 79]]
     ],
     xia:{
         leng: [[
@@ -298,7 +298,251 @@ const parkData0 = {
         }
     },
     fuHeLineData: fuHeLineData,
-    fangAnData:fangAnData,
+    fangAnData:{
+        barData: fangAnData.barData,
+        tableData: fangAnData.tableData,
+        radarData: [{
+            id:0,
+            option:{
+                color:['#6DE5FF','#7657F0','#00A7FF'],
+                tooltip: {
+                    trigger: 'axis'
+                },
+                textStyle:{
+                    fontSize: 10,
+                    color: 'rgba(255, 255, 255, 0.65)'
+                },
+                radar: [
+                    {
+                        indicator: [
+                            {text: '余热回收改造', max: 800},
+                            {text: '循环水系统改造', max: 800},
+                            {text: '分布式能源改造', max: 800},
+                        ],
+                        center: ['17%', '50%'],
+                        shape: 'circle',
+                        radius: 60,
+                        startAngle: 90,
+                        axisLine:{
+                            show: false
+                        },
+                        splitLine:{
+                            show:false
+                        },
+                        splitArea:{
+                            areaStyle:{
+                                color:['rgba(109, 229, 255,0.5)', 'rgba(109, 229, 255,0.4)','rgba(109, 229, 255,0.3)','rgba(109, 229, 255,0.2)','rgba(109, 229, 255,0.1)']
+                            }
+                        }
+
+                    },
+                    {
+                        indicator: [
+                            {text: '余热回收改造', max: 800},
+                            {text: '循环水系统改造', max: 800},
+                            {text: '分布式能源改造', max: 800},
+                        ],
+                        radius: 60,
+                        startAngle: 135,
+                        shape: 'circle',
+                        center: ['50%', '50%'],
+                        axisLine:{
+                            show: false
+                        },
+                        splitLine:{
+                            show:false
+                        },
+                        splitArea:{
+                            areaStyle:{
+                                color:['rgba(109, 229, 255,0.5)', 'rgba(109, 229, 255,0.4)','rgba(109, 229, 255,0.3)','rgba(109, 229, 255,0.2)','rgba(109, 229, 255,0.1)']
+                            }
+                        }
+                    },
+                    {
+                        indicator: [
+                            {text: '余热回收改造', max: 800},
+                            {text: '循环水系统改造', max: 800},
+                            {text: '分布式能源改造', max: 800},
+                        ],
+                        center: ['83%', '50%'],
+                        shape: 'circle',
+                        radius: 60,
+                        startAngle: 90,
+                        axisLine:{
+                            show: false
+                        },
+                        splitLine:{
+                            show:false
+                        },
+                        splitArea:{
+                            areaStyle:{
+                                color:['rgba(109, 229, 255,0.5)', 'rgba(109, 229, 255,0.4)','rgba(109, 229, 255,0.3)','rgba(109, 229, 255,0.2)','rgba(109, 229, 255,0.1)']
+                            }
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        type: 'radar',
+                        tooltip: {
+                            trigger: 'item'
+                        },
+                        areaStyle: {},
+                        data: [
+                            {
+                                value: fangAnDataSet.fenlei.radar[0],
+                                name: '方案一'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'radar',
+                        radarIndex: 1,
+                        areaStyle: {},
+                        data: [
+                            {
+                                value: fangAnDataSet.fenlei.radar[1],
+                                name: '方案二'
+                            },
+                        ]
+                    },
+                    {
+                        type: 'radar',
+                        radarIndex: 2,
+                        areaStyle: {},
+                        data: [
+                            {
+                                name: '方案三',
+                                value: fangAnDataSet.fenlei.radar[2],
+                            }
+                        ]
+                    }
+                ]}
+        },{
+            id:1,
+            option:{
+                color:['#6DE5FF','#7657F0','#00A7FF'],
+                tooltip: {
+                    trigger: 'axis'
+                },
+                textStyle:{
+                    fontSize: 10,
+                    color: 'rgba(255, 255, 255, 0.65)'
+                },
+                radar: [
+                    {
+                        indicator: [
+                            {text: '投资成本', max: 5},
+                            {text: '环保性', max: 5},
+                            {text: '节能性', max: 5},
+                            {text: '安全性', max: 5},
+                            {text: '运行能力',max: 5}
+                        ],
+                        center: ['17%', '50%'],
+                        shape: 'circle',
+                        radius: 60,
+                        startAngle: 90,
+                        axisLine:{
+                            show: false
+                        },
+                        splitLine:{
+                            show:false
+                        },
+                        splitArea:{
+                            areaStyle:{
+                                color:['rgba(109, 229, 255,0.5)', 'rgba(109, 229, 255,0.4)','rgba(109, 229, 255,0.3)','rgba(109, 229, 255,0.2)','rgba(109, 229, 255,0.1)']
+                            }
+                        }
+
+                    },
+                    {
+                        indicator: [
+                            {text: '投资成本', max: 5},
+                            {text: '环保性', max: 5},
+                            {text: '节能性', max: 5},
+                            {text: '安全性', max: 5},
+                            {text: '运行能力',max: 5}
+                        ],
+                        radius: 60,
+                        startAngle: 90,
+                        shape: 'circle',
+                        center: ['50%', '50%'],
+                        axisLine:{
+                            show: false
+                        },
+                        splitLine:{
+                            show:false
+                        },
+                        splitArea:{
+                            areaStyle:{
+                                color:['rgba(109, 229, 255,0.5)', 'rgba(109, 229, 255,0.4)','rgba(109, 229, 255,0.3)','rgba(109, 229, 255,0.2)','rgba(109, 229, 255,0.1)']
+                            }
+                        }
+                    },
+                    {
+                        indicator: [
+                            {text: '投资成本', max: 5},
+                            {text: '环保性', max: 5},
+                            {text: '节能性', max: 5},
+                            {text: '安全性', max: 5},
+                            {text: '运行能力',max: 5}
+                        ],
+                        center: ['83%', '50%'],
+                        shape: 'circle',
+                        radius: 60,
+                        startAngle: 90,
+                        axisLine:{
+                            show: false
+                        },
+                        splitLine:{
+                            show:false
+                        },
+                        splitArea:{
+                            areaStyle:{
+                                color:['rgba(109, 229, 255,0.5)', 'rgba(109, 229, 255,0.4)','rgba(109, 229, 255,0.3)','rgba(109, 229, 255,0.2)','rgba(109, 229, 255,0.1)']
+                            }
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        type: 'radar',
+                        tooltip: {
+                            trigger: 'item'
+                        },
+                        areaStyle: {},
+                        data: [
+                            {
+                                value: fangAnDataSet.zong.radar[0],
+                                name: '方案一'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'radar',
+                        radarIndex: 1,
+                        areaStyle: {},
+                        data: [
+                            {
+                                value: fangAnDataSet.zong.radar[1],
+                                name: '方案二'
+                            },
+                        ]
+                    },
+                    {
+                        type: 'radar',
+                        radarIndex: 2,
+                        areaStyle: {},
+                        data: [
+                            {
+                                name: '方案三',
+                                value: fangAnDataSet.zong.radar[2],
+                            }
+                        ]
+                    }
+                ]}
+        }],
+    },
     yunXingData: yunXingData
 }
 

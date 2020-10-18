@@ -28,11 +28,16 @@
           </ul>
         </div>
       </div>
-      <div class="home-panel-line-chart" :class="{ 'has-bar' : hasBar}" >
-        <line-chart :lineData="lineChartData"/>
+      <div class="home-panel-line-chart" :class="{'has-bar' : !hasBar}" >
+        <line-chart :lineData="lineChartData"  v-if="!hasBar"/>
+        <img :src="require(`../../assets/home/chart/home${id}.png`)" alt="" v-if="hasBar"/>
       </div>
-      <div class="home-panel-bar-chart" v-if="hasBar">
-        <bar-chart :bar-data="barChartData"/>
+      <div class="home-panel-bar-chart" v-if="id!==1" :class="{'has-bar' : hasBar}">
+        <bar-chart :bar-data="barChartData" v-if="hasBar"/>
+        <img :src="require(`../../assets/home/chart/home${id}.png`)" :class="{'img4' : id === 4}" alt="" v-if="!hasBar"/>
+      </div>
+      <div class="home-panel-bar-chart" v-if="id===1">
+        <img src="../../assets/home/chart/home1d.png" alt=""/>
       </div>
     </div>
   </div>
@@ -58,6 +63,10 @@ export default {
     // }
   },
   props:{
+    id:{
+      type: Number,
+      required: true
+    },
     name: {
       type: String,
       required: true
@@ -113,15 +122,17 @@ export default {
     letter-spacing: 1px;
   }
   .has-bar-text-wrapper {
-    height: 320px;
+    height: 360px;
+    padding-top: 20px;
   }
   .no-bar-text-wrapper {
-    height: 780px;
+    height: 360px;
+    padding-top: 50px;
   }
   .home-panel-para {
     width: 840px;
     margin: 40px 80px;
-    font-size: 28px;
+    font-size: 40px;
     font-family: PingFangSC-Semibold, PingFang SC, serif;
     letter-spacing: 1px;
     line-height: 40px;
@@ -144,8 +155,8 @@ export default {
   .has-bar-header{
     width: 840px;
     height: 63px;
-    font-size: 28px;
-    margin:100px 80px 23px;
+    font-size: 40px;
+    margin:0 80px;
     font-family: PingFangSC-Semibold, PingFang SC, serif;
     font-weight: 600;
     color: #6DE5FF;
@@ -155,25 +166,40 @@ export default {
     padding-left: 25px;
     width: 840px;
     line-height: 40px;
-    font-size: 28px;
+    font-size: 40px;
     letter-spacing: 1px;
     font-family: PingFangSC-Semibold, PingFang SC, serif;
-    margin: 48px 82px 0;
+    margin: 20px 82px 0;
     font-weight: 400;
   }
   .has-bar-text-body{
     /*display: inline-block;*/
     padding-left: 50px;
-    margin-top: -38px;
+    margin-top: -34px;
   }
   .home-panel-line-chart{
     width: 840px;
     height: 520px;
     margin: 82px 80px 60px;
+    background: rgba(134, 244, 255, 0.05);
   }
   .home-panel-bar-chart{
     width: 840px;
     height: 520px;
     margin: 0 80px;
+    background: rgba(134, 244, 255, 0.05);
+  }
+  img{
+    width: 720px;
+    height: 400px;
+    margin: 60px;
+  }
+  .has-bar{
+    background: transparent;
+  }
+  .img4{
+    width: 840px;
+    height: 520px;
+    margin: 0;
   }
 </style>

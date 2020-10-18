@@ -75,8 +75,7 @@ const parkData4 = {
                 {
                     showSymbol: false,
                     type: 'line',
-                    data: [0.56, 0.56, 0.57, 0.58, 0.6, 0.65, 0.68, 0.74, 0.77, 0.79, 0.8, 0.78,
-                        0.77, 0.79, 0.8, 0.81, 0.79, 0.77, 0.72, 0.67, 0.63, 0.6, 0.57, 0.56],
+                    data: [0.31,0.31,0.38,0.38,0.34,0.32,0.42,0.49,0.56,0.5,0.5,0.57,0.63,0.58,0.59,0.59,0.61,0.51,0.65,0.58,0.40 ,0.31,0.29,0.32],
                     lineStyle: {        // 系列级个性化折线样式
                         width: 2,
                         type: 'solid',
@@ -167,8 +166,7 @@ const parkData4 = {
                     showSymbol: false,
                     type: 'line',
                     data: [0.09, 0.09, 0.1, 0.1, 0.12, 0.15, 0.38, 0.54, 0.57, 0.58, 0.59, 0.59,
-                        0.57, 0.52, 0.45, 0.43, 0.39, 0.37, 0.37, 0.36, 0.3, 0.26, 0.21, 0.09
-                    ],
+                        0.57, 0.52, 0.45, 0.43, 0.39, 0.37, 0.37, 0.36, 0.3, 0.26, 0.21, 0.09],
                     lineStyle: {        // 系列级个性化折线样式
                         width: 2,
                         type: 'solid',
@@ -502,7 +500,7 @@ const parkData4 = {
                 series: [
                     {
                         type: 'bar',
-                        data: [1630, 1150, 1420],
+                        data: [1430,1750,1620],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -580,7 +578,7 @@ const parkData4 = {
                 series: [
                     {
                         type: 'bar',
-                        data: [7.65, 9.56, 8.66],
+                        data: [6.7,9.3,8.9],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -609,12 +607,9 @@ const parkData4 = {
                 radar: [
                     {
                         indicator: [
-                            {text: '综合能效服务', max: 800},
-                            {text: '分布式清洁能源服务', max: 800},
-                            {text: '专属电动汽车', max: 800},
-                            {text: '商业模式', max: 800},
-                            {text: '供冷供热供电多能服务',max: 800},
-                            {text: '能源技术', max: 800}
+                            {text: '太阳能节能灯具', max: 800},
+                            {text: '空调末端改造', max: 800},
+                            {text: '电采暖', max: 800},
                         ],
                         center: ['17%', '50%'],
                         shape: 'circle',
@@ -635,10 +630,9 @@ const parkData4 = {
                     },
                     {
                         indicator: [
-                            {text: '综合能效服务', max: 1000},
-                            {text: '供冷供热供电多能服务', max: 1000},
-                            {text: '专属电动汽车', max: 1000},
-                            {text: '商业模式', max: 1000},
+                            {text: '太阳能节能灯具', max: 800},
+                            {text: '空调末端改造', max: 800},
+                            {text: '电采暖', max: 800},
                         ],
                         radius: 60,
                         startAngle: 135,
@@ -658,11 +652,9 @@ const parkData4 = {
                     },
                     {
                         indicator: [
-                            {text: '综合能效服务', max: 1000},
-                            {text: '分布式清洁能源服务', max: 1000},
-                            {text: '专属电动汽车', max: 1000},
-                            {text: '商业模式', max: 1000},
-                            {text: '供冷供热供电多能服务', max: 1000}
+                            {text: '太阳能节能灯具', max: 800},
+                            {text: '空调末端改造', max: 800},
+                            {text: '电采暖', max: 800},
                         ],
                         center: ['83%', '50%'],
                         shape: 'circle',
@@ -690,7 +682,7 @@ const parkData4 = {
                         areaStyle: {},
                         data: [
                             {
-                                value: [250, 300, 200, 120, 750, 300],
+                                value: [323,589,518],
                                 name: '方案一'
                             }
                         ]
@@ -701,7 +693,7 @@ const parkData4 = {
                         areaStyle: {},
                         data: [
                             {
-                                value: [300, 750, 175, 140],
+                                value: [614,654,482],
                                 name: '方案二'
                             },
                         ]
@@ -713,7 +705,7 @@ const parkData4 = {
                         data: [
                             {
                                 name: '方案三',
-                                value: [285, 370, 150, 150, 850],
+                                value: [568,689,363],
                             }
                         ]
                     }
@@ -876,7 +868,7 @@ const parkData4 = {
                 xAxis: {
                     type: 'category',
                     boundaryGap: true,
-                    data: ['可再生能源消耗率（%）', '能源效率（%）'],
+                    data: ['能源效率（%）'],
                     axisLabel:{
                         interval: 0
                     },
@@ -916,7 +908,7 @@ const parkData4 = {
                 series: [
                     {
                         type: 'bar',
-                        data: [76, 80],
+                        data: [75],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -930,7 +922,7 @@ const parkData4 = {
                     },
                     {
                         type: 'bar',
-                        data: [92, 72],
+                        data: [72],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -944,7 +936,7 @@ const parkData4 = {
                     },
                     {
                         type: 'bar',
-                        data: [85, 73],
+                        data: [75],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -984,7 +976,7 @@ const parkData4 = {
                 xAxis: {
                     type: 'category',
                     boundaryGap: true,
-                    data: ['可再生能源消耗率（%）', '能源效率（%）'],
+                    data: ['能源效率（%）'],
                     axisLabel:{
                         interval: 0
                     },
@@ -1024,7 +1016,7 @@ const parkData4 = {
                 series: [
                     {
                         type: 'bar',
-                        data: [85, 80],
+                        data: [80],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1038,7 +1030,7 @@ const parkData4 = {
                     },
                     {
                         type: 'bar',
-                        data: [88, 73],
+                        data: [70],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1052,7 +1044,7 @@ const parkData4 = {
                     },
                     {
                         type: 'bar',
-                        data: [76, 73],
+                        data: [72],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1092,7 +1084,7 @@ const parkData4 = {
                 xAxis: {
                     type: 'category',
                     boundaryGap: true,
-                    data: ['可再生能源消耗率（%）', '能源效率（%）'],
+                    data: ['能源效率（%）'],
                     axisLabel:{
                         interval: 0
                     },
@@ -1132,7 +1124,7 @@ const parkData4 = {
                 series: [
                     {
                         type: 'bar',
-                        data: [65, 84],
+                        data: [83],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1146,7 +1138,7 @@ const parkData4 = {
                     },
                     {
                         type: 'bar',
-                        data: [76, 69],
+                        data: [70],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1160,7 +1152,7 @@ const parkData4 = {
                     },
                     {
                         type: 'bar',
-                        data: [80, 79],
+                        data: [77],
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,

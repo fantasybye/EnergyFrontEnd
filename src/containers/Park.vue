@@ -199,6 +199,7 @@ export default {
   methods: {
     fetchData(){
       let count = 0;
+      const interval = 5000;
       switch (this.$route.query.id){
         case '0':
           this.id=0;
@@ -253,8 +254,8 @@ export default {
           this.classObject.background3=false;
           this.classObject.background4=false;
           this.parkData = this.$store.state.park[5];
-          this.show=true;
-          setTimeout(() => {this.show = true}, 5000)
+          this.show=false;
+          setTimeout(() => {this.show = true}, interval)
           break;
         case 'stop':
           this.id=6;
@@ -265,36 +266,38 @@ export default {
           this.classObject.background4=false;
           this.parkData = this.$store.state.park[6];
           this.show=false;
-          setTimeout(() => {this.show = true}, 5000)
+          setTimeout(() => {this.show = true}, interval)
           break;
         default: this.parkData = this.$store.state.park[0];
       }
       this.yunXingData = this.parkData.yunXingData.xia;
       this.leReData = this.yunXingData.leng;
       setInterval(() => {
-          switch (count%3){
+          switch (count%4){
             case 0: this.clickXia();break;
             case 1: this.clickDong();break;
             case 2: this.clickGuoDu();break;
+            case 3: this.leReClicked = 1;this.leReData = this.parkData.yunXingData.guoDu.re;break;
             default:break;
           }
           count++;
-      }, 5000)
+      }, interval)
     },
     clickXia(){
       this.buttonClicked = 0;
       this.yunXingData = this.parkData.yunXingData.xia;
-      this.clickLeng()
+      this.leReData = this.parkData.yunXingData.xia.leng;
     },
     clickDong(){
       this.buttonClicked = 1;
       this.yunXingData = this.parkData.yunXingData.dong;
-      this.clickRe()
+      this.leReData = this.parkData.yunXingData.dong.re;
     },
     clickGuoDu(){
       this.buttonClicked = 2;
       this.yunXingData = this.parkData.yunXingData.guoDu;
-      this.clickLeng()
+      this.leReClicked = 0;
+      this.leReData = this.parkData.yunXingData.guoDu.leng;
     },
     clickLeng(){
       this.leReClicked = 0;
@@ -484,6 +487,7 @@ export default {
 }
 .she-bei-body{
   height: 1620px;
+  position: absolute;
 }
 .neng-hao-fen-xi {
   position: absolute;
@@ -557,7 +561,7 @@ export default {
 .fang-an-text{
   width: 100%;
   height: 68px;
-  padding-top: 35px;
+  padding-top: 24px;
   text-indent: 32px;
   margin-bottom: 0;
   font-size: 24px;
