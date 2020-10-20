@@ -468,9 +468,9 @@ export default {
   display: inline-block;
   height: 88px;
   margin-left: 37px;
-  font-size: 28px;
+  font-size: 36px;
   font-family: PingFangSC-Medium, PingFang SC, serif;
-  font-weight: 500;
+  font-weight: 600;
   color: #FFFFFF;
   line-height: 88px;
   letter-spacing: 1px;
@@ -551,7 +551,7 @@ export default {
 .miao-shu{
   width: 1016px;
   height: 22px;
-  font-size: 16px;
+  font-size: 18px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #FFFFFF;
@@ -578,12 +578,12 @@ export default {
   top: 215px;
 }
 .brief-text{
-  font-size: 16px;
+  font-size: 28px;
   width: 100%;
   font-family: PingFangSC-Semibold, PingFang SC, serif;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 35px;
+  color: rgba(255, 255, 255, 1);
+  /*line-height: 35px;*/
   margin-bottom: 8px;
 }
 .brief-img{

@@ -425,15 +425,15 @@ const newParkData0 = {
                 legend: {
                     icon: 'circle',
                     orient: 'vertical',
-                    right: 80,
-                    top: 150,
+                    right: 50,
+                    top: 130,
                     data: ['新增企业','照明', '空调机组', '冷热源机房', '电梯', '工业用电', '动力及消防'],
                     itemGap: 16,
                     itemWidth: 12,
                     itemHeight: 12,
                     textStyle:{
-                        color:"rgba(255, 255, 255, 0.65)",
-                        fontSize: 12,
+                        color:"rgba(255, 255, 255, 1)",
+                        fontSize: 20,
                         fontWeight: 'normal',
                     }
                 },
@@ -1075,8 +1075,8 @@ const newParkData0 = {
                   y:20
                 },
                 textStyle:{
-                    fontSize: 10,
-                    color: 'rgba(255, 255, 255, 0.65)'
+                    fontSize: 16,
+                    color: 'rgba(255, 255, 255, 1)'
                 },
                 radar: [
                     {
@@ -1269,8 +1269,8 @@ const newParkData0 = {
                     trigger: 'axis'
                 },
                 textStyle:{
-                    fontSize: 10,
-                    color: 'rgba(255, 255, 255, 0.65)'
+                    fontSize: 16,
+                    color: 'rgba(255, 255, 255, 1)'
                 },
                 legend:{
                     icon:'circle',

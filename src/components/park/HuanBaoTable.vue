@@ -67,7 +67,7 @@ name: "HuanBaoTable",
 .table-wrapper table{
   width: 960px;
   height: 200px;
-  font-size: 12px;
+  font-size: 22px;
   font-family: PingFangSC-Medium, PingFang SC,serif;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.85);

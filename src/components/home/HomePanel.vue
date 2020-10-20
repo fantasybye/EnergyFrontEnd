@@ -34,7 +34,7 @@
       </div>
       <div class="home-panel-bar-chart" v-if="id!==1" :class="{'has-bar' : hasBar}">
         <bar-chart :bar-data="barChartData" v-if="hasBar"/>
-        <img :src="require(`../../assets/home/chart/home${id}.png`)" :class="{'img4' : id === 4}" alt="" v-if="!hasBar"/>
+        <img :src="require(`../../assets/home/chart/home${id}.png`)" alt="" v-if="!hasBar"/>
       </div>
       <div class="home-panel-bar-chart" v-if="id===1">
         <img src="../../assets/home/chart/home1d.png" alt=""/>
