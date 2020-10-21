@@ -584,6 +584,7 @@ export default {
   font-weight: 600;
   color: rgba(255, 255, 255, 1);
   /*line-height: 35px;*/
+  text-indent: 60px;
   margin-bottom: 8px;
 }
 .brief-img{
