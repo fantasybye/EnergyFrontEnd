@@ -157,7 +157,7 @@ const parkData0 = {
                     text:"用电逐项能耗(kwh)",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -178,7 +178,31 @@ const parkData0 = {
                     boundaryGap: true,
                     data: ['照明', '空调机组', '冷热源机房', '电梯', '工业用电', '动力及消防'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        // fontSize: 14,
+                        // formatter:function(params) {
+                        //     let newParamsName = "";
+                        //     let paramsNameNumber = params.length;
+                        //     let provideNumber = 4;  //一行显示几个字
+                        //     let rowNumber = Math.ceil(paramsNameNumber / provideNumber);
+                        //     if (paramsNameNumber > provideNumber) {
+                        //         for (let p = 0; p < rowNumber; p++) {
+                        //             let tempStr = "";
+                        //             let start = p * provideNumber;
+                        //             let end = start + provideNumber;
+                        //             if (p === rowNumber - 1) {
+                        //                 tempStr = params.substring(start, paramsNameNumber);
+                        //             } else {
+                        //                 tempStr = params.substring(start, end) + "\n";
+                        //             }
+                        //             newParamsName += tempStr;
+                        //         }
+                        //
+                        //     } else {
+                        //         newParamsName = params;
+                        //     }
+                        //     return newParamsName
+                        // },
                     },
                     axisLine:{
                         show:false
@@ -209,7 +233,7 @@ const parkData0 = {
                 textStyle: {
                     color: "rgba(255, 255, 255, 0.65)",
                     fontFamily: "PingFangSC-Semibold",
-                    fontSize:10
+                    fontSize:18
                 },
                 series: [
                     {
@@ -237,7 +261,7 @@ const parkData0 = {
                     text:"用电逐项能耗占比",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',

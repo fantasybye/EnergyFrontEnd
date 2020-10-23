@@ -9,7 +9,7 @@ export default function yunXingDataGenerator(yunXingData){
                     text:"夏季",
                     textStyle:{
                         color:"#FFF",
-                        fontSize: 16,
+                        fontSize:24,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -30,7 +30,8 @@ export default function yunXingDataGenerator(yunXingData){
                     boundaryGap: true,
                     data: ['可再生能源消耗率（%）', '能源效率（%）'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 24
                     },
                     axisLine:{
                         show:false
@@ -117,7 +118,7 @@ export default function yunXingDataGenerator(yunXingData){
                     text:"冬季",
                     textStyle:{
                         color:"#FFF",
-                        fontSize: 16,
+                        fontSize:24,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -138,7 +139,8 @@ export default function yunXingDataGenerator(yunXingData){
                     boundaryGap: true,
                     data: ['可再生能源消耗率（%）', '能源效率（%）'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 24
                     },
                     axisLine:{
                         show:false
@@ -225,7 +227,7 @@ export default function yunXingDataGenerator(yunXingData){
                     text:"过渡季",
                     textStyle:{
                         color:"#FFF",
-                        fontSize: 16,
+                        fontSize:24,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -246,7 +248,8 @@ export default function yunXingDataGenerator(yunXingData){
                     boundaryGap: true,
                     data: ['可再生能源消耗率（%）', '能源效率（%）'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 24
                     },
                     axisLine:{
                         show:false
@@ -335,7 +338,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -355,7 +358,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -461,7 +464,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -481,7 +484,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -587,7 +590,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -607,7 +610,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -714,7 +717,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -734,7 +737,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -840,7 +843,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -860,7 +863,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -966,7 +969,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -986,7 +989,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1095,7 +1098,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1115,7 +1118,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1221,7 +1224,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1241,7 +1244,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1347,7 +1350,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1367,12 +1370,12 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
                         itemHeight:9,
-                        data: [ 'AC', 'EC', 'cload']
+                        data: [ 'GP', 'HP', 'hload']
                     },
                     xAxis: {
                         type: 'category',
@@ -1474,7 +1477,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1494,7 +1497,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1600,7 +1603,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1620,7 +1623,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1726,7 +1729,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1746,7 +1749,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1855,7 +1858,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1875,7 +1878,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1981,7 +1984,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2001,7 +2004,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2107,7 +2110,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2127,7 +2130,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2234,7 +2237,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2254,7 +2257,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2360,7 +2363,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2380,7 +2383,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2486,7 +2489,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2506,12 +2509,12 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
                         itemHeight:9,
-                        data: [ 'AC', 'EC', 'cload']
+                        data: [ 'GP', 'HP', 'hload']
                     },
                     xAxis: {
                         type: 'category',
@@ -2613,7 +2616,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2633,7 +2636,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2739,7 +2742,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2759,7 +2762,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2865,7 +2868,7 @@ export default function yunXingDataGenerator(yunXingData){
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2885,7 +2888,7 @@ export default function yunXingDataGenerator(yunXingData){
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize:18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,

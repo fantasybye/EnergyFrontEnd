@@ -15,7 +15,7 @@ const homeData0 = {
                 text:"2010-2019年中国化工园区平均产值走势",
                 textStyle:{
                     color:"#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 28,
                     fontWeight: 'normal',
                 },
                 textAlign:'center',
@@ -34,12 +34,15 @@ const homeData0 = {
                 name: '年份',
                 nameTextStyle:{
                     padding: [64, 0, 0, 0],
-                    fontSize: 14,
+                    fontSize: 20,
                     color:'rgba(255, 255, 255, 0.65)'
                 },
                 data: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
                 axisLine:{
                     show:false
+                },
+                axisLabel:{
+                    fontSize: 20,
                 },
                 axisTick: {
                     show:false
@@ -52,8 +55,11 @@ const homeData0 = {
                 name: '亿元',
                 nameTextStyle:{
                     padding: [0, 35, 12, 0],
-                    fontSize: 14,
+                    fontSize: 20,
                     color:'rgba(255, 255, 255, 0.65)'
+                },
+                axisLabel:{
+                    fontSize: 20,
                 },
                 axisLine:{
                     show:false
@@ -101,7 +107,7 @@ const homeData0 = {
                 text:"负荷曲线",
                 textStyle:{
                     color:"#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 28,
                     fontWeight: 'normal',
                 },
                 textAlign:'center',
@@ -119,7 +125,7 @@ const homeData0 = {
                 itemGap:32,
                 textStyle:{
                     color:"rgba(255, 255, 255, 0.65)",
-                    fontSize: 14,
+                    fontSize: 24,
                     fontWeight: 'normal',
                 },
                 icon: 'circle',
@@ -132,6 +138,7 @@ const homeData0 = {
                     13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,25],
                 axisLabel:{
                     interval: 4,
+                    fontSize: 20
                 },
                 axisLine:{
                     show:false
@@ -147,6 +154,7 @@ const homeData0 = {
                 offset: 12,
                 max:1.0,
                 axisLabel: {
+                    fontSize: 20,
                     formatter: function (v) {
                         return v.toFixed(1)//表示整数.其他数值类型以此类推                                    }
                     }
@@ -168,7 +176,7 @@ const homeData0 = {
             textStyle: {
                 color: "rgba(255, 255, 255, 0.65)",
                 fontFamily: "PingFangSC-Semibold",
-                fontSize:14
+                fontSize:20
             },
             series: [
                 {

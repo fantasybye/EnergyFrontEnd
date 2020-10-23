@@ -9,7 +9,7 @@ export default function fangAnBarDataGenerator(fangAnData, tableData){
                     text:"投资费用对比",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -30,7 +30,8 @@ export default function fangAnBarDataGenerator(fangAnData, tableData){
                     boundaryGap: true,
                     data: ['方案一', '方案二', '方案三'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 18
                     },
                     axisLine:{
                         show:false
@@ -61,7 +62,7 @@ export default function fangAnBarDataGenerator(fangAnData, tableData){
                 textStyle: {
                     color: "rgba(255, 255, 255, 0.65)",
                     fontFamily: "PingFangSC-Semibold",
-                    fontSize:10
+                    fontSize: 18
                 },
                 series: [
                     {
@@ -87,7 +88,7 @@ export default function fangAnBarDataGenerator(fangAnData, tableData){
                     text:"回收年限对比",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -108,7 +109,8 @@ export default function fangAnBarDataGenerator(fangAnData, tableData){
                     boundaryGap: true,
                     data: ['方案一', '方案二', '方案三'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 18
                     },
                     axisLine:{
                         show:false
@@ -139,7 +141,7 @@ export default function fangAnBarDataGenerator(fangAnData, tableData){
                 textStyle: {
                     color: "rgba(255, 255, 255, 0.65)",
                     fontFamily: "PingFangSC-Semibold",
-                    fontSize:10
+                    fontSize: 18
                 },
                 series: [
                     {
@@ -167,7 +169,7 @@ export default function fangAnBarDataGenerator(fangAnData, tableData){
                     trigger: 'axis'
                 },
                 textStyle:{
-                    fontSize: 10,
+                    fontSize: 18,
                     color: 'rgba(255, 255, 255, 0.65)'
                 },
                 radar: [
@@ -290,7 +292,7 @@ export default function fangAnBarDataGenerator(fangAnData, tableData){
                     trigger: 'axis'
                 },
                 textStyle:{
-                    fontSize: 10,
+                    fontSize: 18,
                     color: 'rgba(255, 255, 255, 0.65)'
                 },
                 radar: [

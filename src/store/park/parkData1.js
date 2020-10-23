@@ -155,7 +155,7 @@ const parkData1 = {
                     text:"用电逐项能耗(kwh)",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -207,7 +207,7 @@ const parkData1 = {
                 textStyle: {
                     color: "rgba(255, 255, 255, 0.65)",
                     fontFamily: "PingFangSC-Semibold",
-                    fontSize:10
+                    fontSize:18
                 },
                 series: [
                     {
@@ -235,7 +235,7 @@ const parkData1 = {
                     text:"用电逐项能耗占比",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',

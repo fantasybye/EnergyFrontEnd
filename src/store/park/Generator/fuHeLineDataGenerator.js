@@ -8,7 +8,7 @@ export default function fuHeLineDataGenerator(fuHeData){
                 text:"逐时电负荷特征系数",
                 textStyle:{
                     color:"#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 30,
                     fontWeight: 'normal',
                 },
                 textAlign:'center',
@@ -98,7 +98,7 @@ export default function fuHeLineDataGenerator(fuHeData){
                 text: "逐时热负荷特征系数",
                 textStyle: {
                     color: "#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 30,
                     fontWeight: 'normal',
                 },
                 textAlign: 'center',
@@ -188,7 +188,7 @@ export default function fuHeLineDataGenerator(fuHeData){
                 text: "逐时冷负荷特征系数",
                 textStyle: {
                     color: "#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 30,
                     fontWeight: 'normal',
                 },
                 textAlign: 'center',

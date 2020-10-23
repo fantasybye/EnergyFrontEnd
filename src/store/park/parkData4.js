@@ -16,7 +16,7 @@ const parkData4 = {
                 text:"逐时电负荷特征系数",
                 textStyle:{
                     color:"#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 30,
                     fontWeight: 'normal',
                 },
                 textAlign:'center',
@@ -106,7 +106,7 @@ const parkData4 = {
                 text: "逐时热负荷特征系数",
                 textStyle: {
                     color: "#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 30,
                     fontWeight: 'normal',
                 },
                 textAlign: 'center',
@@ -197,7 +197,7 @@ const parkData4 = {
                 text: "逐时冷负荷特征系数",
                 textStyle: {
                     color: "#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 30,
                     fontWeight: 'normal',
                 },
                 textAlign: 'center',
@@ -291,7 +291,7 @@ const parkData4 = {
                     text:"用电逐项能耗(kwh)",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -343,7 +343,7 @@ const parkData4 = {
                 textStyle: {
                     color: "rgba(255, 255, 255, 0.65)",
                     fontFamily: "PingFangSC-Semibold",
-                    fontSize:10
+                    fontSize:18
                 },
                 series: [
                     {
@@ -372,7 +372,7 @@ const parkData4 = {
                     text:"用电逐项能耗占比",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -443,7 +443,7 @@ const parkData4 = {
                     text:"投资费用对比",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -464,7 +464,8 @@ const parkData4 = {
                     boundaryGap: true,
                     data: ['方案一', '方案二', '方案三'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 18
                     },
                     axisLine:{
                         show:false
@@ -495,7 +496,7 @@ const parkData4 = {
                 textStyle: {
                     color: "rgba(255, 255, 255, 0.65)",
                     fontFamily: "PingFangSC-Semibold",
-                    fontSize:10
+                    fontSize:18
                 },
                 series: [
                     {
@@ -521,7 +522,7 @@ const parkData4 = {
                     text:"回收年限对比",
                     textStyle:{
                         color:"#6DE5FF",
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -542,7 +543,8 @@ const parkData4 = {
                     boundaryGap: true,
                     data: ['方案一', '方案二', '方案三'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 18
                     },
                     axisLine:{
                         show:false
@@ -573,7 +575,7 @@ const parkData4 = {
                 textStyle: {
                     color: "rgba(255, 255, 255, 0.65)",
                     fontFamily: "PingFangSC-Semibold",
-                    fontSize:10
+                    fontSize:18
                 },
                 series: [
                     {
@@ -601,7 +603,7 @@ const parkData4 = {
                     trigger: 'axis'
                 },
                 textStyle:{
-                    fontSize: 16,
+                    fontSize: 18,
                     color: 'rgba(255, 255, 255, 1)'
                 },
                 radar: [
@@ -718,7 +720,7 @@ const parkData4 = {
                     trigger: 'axis'
                 },
                 textStyle:{
-                    fontSize: 16,
+                    fontSize: 18,
                     color: 'rgba(255, 255, 255, 1)'
                 },
                 radar: [
@@ -849,7 +851,7 @@ const parkData4 = {
                     text:"夏季",
                     textStyle:{
                         color:"#FFF",
-                        fontSize: 16,
+                        fontSize:24,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -870,7 +872,8 @@ const parkData4 = {
                     boundaryGap: true,
                     data: ['能源效率（%）'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 24
                     },
                     axisLine:{
                         show:false
@@ -957,7 +960,7 @@ const parkData4 = {
                     text:"冬季",
                     textStyle:{
                         color:"#FFF",
-                        fontSize: 16,
+                        fontSize:24,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -978,7 +981,8 @@ const parkData4 = {
                     boundaryGap: true,
                     data: ['能源效率（%）'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 24
                     },
                     axisLine:{
                         show:false
@@ -1065,7 +1069,7 @@ const parkData4 = {
                     text:"过渡季",
                     textStyle:{
                         color:"#FFF",
-                        fontSize: 16,
+                        fontSize:24,
                         fontWeight: 'normal',
                     },
                     textAlign:'center',
@@ -1086,7 +1090,8 @@ const parkData4 = {
                     boundaryGap: true,
                     data: ['能源效率（%）'],
                     axisLabel:{
-                        interval: 0
+                        interval: 0,
+                        fontSize: 24
                     },
                     axisLine:{
                         show:false
@@ -1175,7 +1180,7 @@ const parkData4 = {
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1195,7 +1200,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1301,7 +1306,7 @@ const parkData4 = {
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1321,7 +1326,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1427,7 +1432,7 @@ const parkData4 = {
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1447,7 +1452,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1554,7 +1559,7 @@ const parkData4 = {
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1574,7 +1579,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1680,7 +1685,7 @@ const parkData4 = {
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1700,7 +1705,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1806,7 +1811,7 @@ const parkData4 = {
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1826,7 +1831,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -1935,7 +1940,7 @@ const parkData4 = {
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -1955,7 +1960,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2061,7 +2066,7 @@ const parkData4 = {
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2081,7 +2086,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2187,7 +2192,7 @@ const parkData4 = {
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2207,12 +2212,12 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
                         itemHeight:9,
-                        data: [ 'AC', 'EC', 'cload']
+                        data: [ 'GP', 'HP', 'hload']
                     },
                     xAxis: {
                         type: 'category',
@@ -2314,7 +2319,7 @@ const parkData4 = {
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2334,7 +2339,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2440,7 +2445,7 @@ const parkData4 = {
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2460,7 +2465,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2566,7 +2571,7 @@ const parkData4 = {
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2586,7 +2591,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2695,7 +2700,7 @@ const parkData4 = {
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2715,7 +2720,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2821,7 +2826,7 @@ const parkData4 = {
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2841,7 +2846,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -2947,7 +2952,7 @@ const parkData4 = {
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -2967,7 +2972,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -3074,7 +3079,7 @@ const parkData4 = {
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -3094,7 +3099,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -3200,7 +3205,7 @@ const parkData4 = {
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -3220,7 +3225,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -3326,7 +3331,7 @@ const parkData4 = {
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -3346,12 +3351,12 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
                         itemHeight:9,
-                        data: [ 'AC', 'EC', 'cload']
+                        data: [ 'GP', 'HP', 'hload']
                     },
                     xAxis: {
                         type: 'category',
@@ -3453,7 +3458,7 @@ const parkData4 = {
                         text:"方案一",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -3473,7 +3478,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -3579,7 +3584,7 @@ const parkData4 = {
                         text:"方案二",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -3599,7 +3604,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,
@@ -3705,7 +3710,7 @@ const parkData4 = {
                         text:"方案三",
                         textStyle:{
                             color:"#6DE5FF",
-                            fontSize: 16,
+                            fontSize:24,
                             fontWeight: 'normal',
                         },
                         textAlign:'center',
@@ -3725,7 +3730,7 @@ const parkData4 = {
                         itemGap:30,
                         textStyle:{
                             color:"rgba(255, 255, 255, 0.65)",
-                            fontSize: 10,
+                            fontSize: 18,
                             fontWeight: 'normal',
                         },
                         itemWidth:9,

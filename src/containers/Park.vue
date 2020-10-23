@@ -547,12 +547,13 @@ export default {
 .fang-an-top .top-text{
   height: 44px;
   padding-top: 16px;
+  font-size: 30px;
 }
 .miao-shu{
   width: 1016px;
   height: 22px;
   font-size: 18px;
-  font-family: PingFangSC-Regular, PingFang SC;
+  font-family: PingFangSC-Regular, PingFang SC, serif;
   font-weight: 400;
   color: #FFFFFF;
   line-height: 22px;
@@ -604,7 +605,7 @@ export default {
   top: 1490px;
   width: 251px;
   height: 40px;
-  font-size: 28px;
+  font-size: 36px;
   font-family: PingFangSC-Medium, PingFang SC, serif;
   font-weight: 500;
   color: #6DE5FF;
@@ -632,7 +633,7 @@ export default {
   width: 837px;
   height: 33px;
   margin:40px 0 10px;
-  font-size: 24px;
+  font-size: 30px;
   font-family: PingFangSC-Regular, PingFang SC, serif;
   font-weight: 400;
   color: #86F4FF;
@@ -670,7 +671,7 @@ export default {
   border: 2px solid;
   border-image: linear-gradient(180deg, rgba(82, 255, 234, 1), rgba(32, 160, 255, 1)) 2 2;
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   font-family: PingFangSC-Regular, PingFang SC, serif;
   font-weight: 400;
   color: #6DE5FF;
@@ -710,7 +711,7 @@ export default {
   height: 48px;
   opacity: 0.6;
   line-height: 48px;
-  font-size: 20px;
+  font-size: 28px;
   font-family: PingFangSC-Regular, PingFang SC, serif;
   font-weight: 400;
   color: #6DE5FF;
@@ -733,7 +734,7 @@ export default {
 .zong-jie-title{
   width: 300px;
   height: 33px;
-  font-size: 24px;
+  font-size: 30px;
   font-family: PingFangSC-Semibold, PingFang SC, serif;
   font-weight: 600;
   color: #FFFFFF;
@@ -763,7 +764,7 @@ export default {
   top: 28px;
   width: 209px;
   height: 33px;
-  font-size: 24px;
+  font-size: 30px;
   font-family: PingFangSC-Regular, PingFang SC, serif;
   font-weight: 400;
   color: #86F4FF;
@@ -795,8 +796,8 @@ export default {
 }
 .rectan{
   display: inline-block;
-  width: 30px;
-  height: 10px;
+  width: 50px;
+  height: 20px;
   margin: 0 12px 0 32px;
 }
 .blue{
@@ -811,14 +812,14 @@ export default {
 .tu-li{
   display: inline-block;
   position: absolute;
-  left: 1457px;
-  top: 964px;
+  left: 1097px;
+  top: 950px;
 }
 .tu-li-label{
   display: inline-block;
-  width: 150px;
+  width: 240px;
   height: 16px;
-  font-size: 14px;
+  font-size: 24px;
   font-family: PingFangSC-Regular, PingFang SC, serif;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.65);

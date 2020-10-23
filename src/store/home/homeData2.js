@@ -15,7 +15,7 @@ const homeData2 = {
                 text:"2010-2019年全球光伏组件产能增长情况",
                 textStyle:{
                     color:"#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 28,
                     fontWeight: 'normal',
                 },
                 textAlign:'center',
@@ -34,10 +34,13 @@ const homeData2 = {
                 name: '年份',
                 nameTextStyle:{
                     padding: [64, 0, 0, 0],
-                    fontSize: 14,
+                    fontSize: 20,
                     color:'rgba(255, 255, 255, 0.65)'
                 },
                 data: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019],
+                axisLabel:{
+                    fontSize: 20,
+                },
                 axisLine:{
                     show:false
                 },
@@ -51,9 +54,12 @@ const homeData2 = {
                 boundaryGap: false,
                 name: '产能（GW）',
                 nameTextStyle:{
-                    padding: [0, 35, 12, 0],
-                    fontSize: 14,
+                    padding: [0, 25, 12, 0],
+                    fontSize: 20,
                     color:'rgba(255, 255, 255, 0.65)'
+                },
+                axisLabel:{
+                    fontSize: 20,
                 },
                 axisLine:{
                     show:false
@@ -73,7 +79,7 @@ const homeData2 = {
             textStyle: {
                 color: "rgba(255, 255, 255, 0.65)",
                 fontFamily: "PingFangSC-Semibold",
-                fontSize:14
+                fontSize:20
             },
             series: [
                 {
@@ -101,7 +107,7 @@ const homeData2 = {
                 text:"负荷曲线",
                 textStyle:{
                     color:"#6DE5FF",
-                    fontSize: 24,
+                    fontSize: 28,
                     fontWeight: 'normal',
                 },
                 textAlign:'center',
@@ -119,7 +125,7 @@ const homeData2 = {
                 itemGap:32,
                 textStyle:{
                     color:"rgba(255, 255, 255, 0.65)",
-                    fontSize: 14,
+                    fontSize: 24,
                     fontWeight: 'normal',
                 },
                 icon: 'circle',
@@ -168,7 +174,7 @@ const homeData2 = {
             textStyle: {
                 color: "rgba(255, 255, 255, 0.65)",
                 fontFamily: "PingFangSC-Semibold",
-                fontSize:14
+                fontSize:20
             },
             series: [
                 {
