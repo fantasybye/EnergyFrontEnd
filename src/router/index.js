@@ -4,7 +4,7 @@ import Home from '@/containers/Home';
 import Park from '@/containers/Park';
 // import JieGuoLineChart from "@/components/home/JieGuoLineChart";
 // import ZhanBiPieChart from "@/components/home/ZhanBiPieChart";
-
+import Modal from "@/components/park/TuoPuModal";
 Vue.use(Router);
 
 export default new Router({
@@ -23,10 +23,10 @@ export default new Router({
           name: 'Park',
           component: Park
         },
-        // {
-        //     path: '/test',
-        //     name: 'Test',
-        //     component: ZhanBiPieChart
-        // }
+        {
+            path: '/test',
+            name: 'Test',
+            component: Modal
+        }
     ]
 })
