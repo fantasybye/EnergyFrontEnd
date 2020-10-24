@@ -12,13 +12,15 @@ import parkData3 from "@/store/park/parkData3";
 import parkData4 from "@/store/park/parkData4";
 import newParkData0 from "@/store/park/newParkData0";
 import stopParkData0 from "@/store/park/stopParkData0";
-
+import modalData0 from "@/store/park/modal/modalData0";
+import modalData1 from "@/store/park/modal/modalData1";
 
 Vue.use(Vuex);
 
 const state = {
     home: [homeData0,homeData1,homeData2,homeData3,homeData4],
-    park: [parkData0,parkData1,parkData2,parkData3,parkData4,newParkData0,stopParkData0]
+    park: [parkData0,parkData1,parkData2,parkData3,parkData4,newParkData0,stopParkData0],
+    modal: [modalData0, modalData1]
 };
 
 export default new Vuex.Store({

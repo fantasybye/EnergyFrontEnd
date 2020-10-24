@@ -4,7 +4,7 @@ import Home from '@/containers/Home';
 import Park from '@/containers/Park';
 // import JieGuoLineChart from "@/components/home/JieGuoLineChart";
 // import ZhanBiPieChart from "@/components/home/ZhanBiPieChart";
-import Modal from "@/components/park/TuoPuModal";
+import Modal from "@/components/park/modal/FangAnModal";
 Vue.use(Router);
 
 export default new Router({

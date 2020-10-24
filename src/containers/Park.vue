@@ -48,8 +48,11 @@
         </div>
       </div>
     </div>
-    <div class="modal-wrapper" v-show="modalShow">
-      <TuoPuModal />
+    <div class="modal-wrapper" v-if="modalShow">
+      <TuoPuModal :name="modalData[caseNo].name" :img-no="modalData[caseNo].imgNo" :label-data="modalData[caseNo].labelData"/>
+    </div>
+    <div class="modal-wrapper" v-if="FAShow">
+      <FangAnModal :data="modalData[3]"/>
     </div>
     <div class="brief">
       <p class="brief-text" v-for="text in parkData.brief" :key="text">{{ text }}</p>
@@ -163,7 +166,8 @@ import HuanBaoTable from "@/components/park/HuanBaoTable";
 import ZongJieBarChart from "@/components/park/bar/ZongJieBarChart";
 import YunXingBarChart from "@/components/park/bar/YunXingBarChart";
 import newLineChart from '@/components/park/line/newLineChart';
-import TuoPuModal from "@/components/park/TuoPuModal";
+import TuoPuModal from "@/components/park/modal/TuoPuModal";
+import FangAnModal from "@/components/park/modal/FangAnModal";
 
 export default {
   components:{
@@ -176,13 +180,16 @@ export default {
     ZongJieBarChart,
     YunXingBarChart,
     newLineChart,
-    TuoPuModal
+    TuoPuModal,
+    FangAnModal
   },
   name: "Park",
   data() {
     return {
       id: 999,
+      caseNo: 0,
       parkData:{},
+      modalData:[],
       yunXingData:{},
       leReData:[],
       classObject:{
@@ -195,12 +202,25 @@ export default {
       buttonClicked: 0,
       leReClicked:0,
       loadingShow: true,
-      modalShow: true,
+      modalShow: false,
+      FAShow: false,
       indicator: <i class="loading-spin anticon anticon-loading anticon-spin ant-spin-dot"/>,
     }
   },
   created() {
     this.fetchData();
+    const that = this;
+    document.onkeydown = function() {//事件对象兼容
+      if(that.id === 0 || that.id === 1) {
+        const key = window.event.keyCode;
+        if (key >= 65 && key <= 67) {
+          that.keyDownTP(key - 65);
+        }
+        if (key === 68) {
+          that.keyDownFA();
+        }
+      }
+    };
   },
   methods: {
     fetchData(){
@@ -214,6 +234,7 @@ export default {
           this.classObject.background2=false;
           this.classObject.background3=false;
           this.classObject.background4=false;
+          this.modalData = this.$store.state.modal[0],
           this.parkData = this.$store.state.park[0];
           break;
         case '1':
@@ -223,6 +244,7 @@ export default {
           this.classObject.background2=false;
           this.classObject.background3=false;
           this.classObject.background4=false;
+          this.modalData = this.$store.state.modal[1],
           this.parkData = this.$store.state.park[1];
           break;
         case '2':
@@ -312,8 +334,25 @@ export default {
     clickRe(){
       this.leReClicked = 1;
       this.leReData = this.yunXingData.re;
+    },
+    keyDownTP(key){
+      if(this.FAShow){
+        this.FAShow = false;
+      }else if(this.modalShow){
+        this.modalShow = false;
+      } else {
+        this.caseNo = key;
+        this.modalShow = true;
+      }
+    },
+    keyDownFA(){
+      if(this.modalShow)
+        this.modalShow = false;
+      else
+        this.FAShow = !this.FAShow;
     }
-  }
+  },
+
 }
 </script>
 
@@ -536,7 +575,8 @@ export default {
   left: 0;
   padding: 0;
   margin: 0;
-  background: rgba( 0 ,12,23,0.2);
+  background: rgba( 0 ,12,23,0.85);
+  z-index: 1;
 }
 .she-bei-fang-an{
   display: inline-block;
