@@ -101,7 +101,10 @@ export default {
                 barWidth: 50,
                 label:{
                   show: true,
-                  position: 'top'
+                  position: 'top',
+                  // formatter: function (v) {
+                  //   return v.toFixed(1)//表示整数.其他数值类型以此类推                                    }
+                  // }
                 }
               }
             ]
