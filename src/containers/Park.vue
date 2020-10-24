@@ -1,5 +1,5 @@
 <template>
-  <div class="park-wrapper" v-if="show">
+  <div class="park-wrapper" v-if="loadingShow">
     <div class="park-title">
 <!--      <div class="park-title-line" />-->
       <p class="park-title-text">{{ parkData.name }}</p>
@@ -47,6 +47,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="modal-wrapper" v-show="modalShow">
+      <TuoPuModal />
     </div>
     <div class="brief">
       <p class="brief-text" v-for="text in parkData.brief" :key="text">{{ text }}</p>
@@ -160,6 +163,7 @@ import HuanBaoTable from "@/components/park/HuanBaoTable";
 import ZongJieBarChart from "@/components/park/bar/ZongJieBarChart";
 import YunXingBarChart from "@/components/park/bar/YunXingBarChart";
 import newLineChart from '@/components/park/line/newLineChart';
+import TuoPuModal from "@/components/park/TuoPuModal";
 
 export default {
   components:{
@@ -171,7 +175,8 @@ export default {
     HuanBaoTable,
     ZongJieBarChart,
     YunXingBarChart,
-    newLineChart
+    newLineChart,
+    TuoPuModal
   },
   name: "Park",
   data() {
@@ -189,7 +194,8 @@ export default {
       },
       buttonClicked: 0,
       leReClicked:0,
-      show: true,
+      loadingShow: true,
+      modalShow: true,
       indicator: <i class="loading-spin anticon anticon-loading anticon-spin ant-spin-dot"/>,
     }
   },
@@ -254,8 +260,8 @@ export default {
           this.classObject.background3=false;
           this.classObject.background4=false;
           this.parkData = this.$store.state.park[5];
-          this.show=false;
-          setTimeout(() => {this.show = true}, interval)
+          this.loadingShow=false;
+          setTimeout(() => {this.loadingShow = true}, interval)
           break;
         case 'stop':
           this.id=6;
@@ -265,8 +271,8 @@ export default {
           this.classObject.background3=false;
           this.classObject.background4=false;
           this.parkData = this.$store.state.park[6];
-          this.show=false;
-          setTimeout(() => {this.show = true}, interval)
+          this.loadingShow=false;
+          setTimeout(() => {this.loadingShow = true}, interval)
           break;
         default: this.parkData = this.$store.state.park[0];
       }
@@ -521,6 +527,16 @@ export default {
   width: 1160px;
   height: 1708px;
   background: rgba(255, 255, 255, 0.05);
+}
+.modal-wrapper{
+  width: 6508px;
+  height: 1940px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background: rgba( 0 ,12,23,0.2);
 }
 .she-bei-fang-an{
   display: inline-block;

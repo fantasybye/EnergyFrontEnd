@@ -47,13 +47,18 @@ export default {
 
 <style scoped>
 .modal-main{
-  position: fixed;
-  left: 20%;
+  position: absolute;
+  /*left: 50%;*/
+  /*margin-left: -915px;*/
+  left: 2338px;
+  top: 50%;
+  margin-top: -740px;
   width: 1830px;
   height: 1467px;
   background: #121832;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
   border-radius: 12px;
+  z-index: 2;
 }
 .modal-text{
   width: 1830px;
