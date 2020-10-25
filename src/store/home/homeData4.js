@@ -18,12 +18,12 @@ const homeData4 = {
                 text:"负荷曲线",
                 textStyle:{
                     color:"#6DE5FF",
-                    fontSize: 28,
+                    fontSize: 36,
                     fontWeight: 'normal',
                 },
                 textAlign:'center',
                 left: '50%',
-                top: 40,
+                top: 30,
             },
             grid:{
                 y:160
@@ -32,11 +32,11 @@ const homeData4 = {
                 trigger: 'axis'
             },
             legend: {
-                top: 110,
+                top: 95,
                 itemGap:32,
                 textStyle:{
-                    color:"rgba(255, 255, 255, 0.65)",
-                    fontSize: 20,
+                    color:"rgba(255, 255, 255, 1)",
+                    fontSize: 24,
                     fontWeight: 'normal',
                 },
                 icon: 'circle',
@@ -49,7 +49,7 @@ const homeData4 = {
                     13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,25],
                 axisLabel:{
                     interval: 4,
-                    fontSize: 20,
+                    fontSize: 28,
                 },
                 axisLine:{
                     show:false
@@ -64,7 +64,7 @@ const homeData4 = {
                 boundaryGap: false,
                 max:1.0,
                 axisLabel: {
-                    fontSize: 20,
+                    fontSize: 28,
                     formatter: function (v) {
                         return v.toFixed(1)//表示整数.其他数值类型以此类推                                    }
                     }
@@ -85,9 +85,9 @@ const homeData4 = {
                 offset: 12
             },
             textStyle: {
-                color: "rgba(255, 255, 255, 0.65)",
+                color: "rgba(255, 255, 255, 1)",
                 fontFamily: "PingFangSC-Semibold",
-                fontSize:14
+                fontSize:28
             },
             series: [
                 {

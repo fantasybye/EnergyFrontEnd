@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#52ffea"/>
+      <stop offset="1" stop-color="#20a0ff"/>
+    </linearGradient>
+    <clipPath id="clip-仪征大数据产业园-1">
+      <rect width="800" height="480"/>
+    </clipPath>
+  </defs>
+  <g id="仪征大数据产业园-1" clip-path="url(#clip-仪征大数据产业园-1)">
+    <g id="组_291" data-name="组 291">
+      <path id="路径_105" data-name="路径 105" d="M4785,7093.752h271.825" transform="translate(-4737.828 -6681)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="2" opacity="0.5"/>
+      <text id="中国化工园区排行榜" transform="translate(0 38)" fill="#6de5ff" font-size="36" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">仪征大数据产业营收情况</tspan></text>
+      <text id="中国化工园区排行榜-2" data-name="中国化工园区排行榜" transform="translate(613 38)" fill="#6de5ff" font-size="36" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-144" y="0">全国各省市大数据</tspan><tspan x="-108" y="50">产业发展排名</tspan></text>
+      <text id="_2.12吨标煤_万元" data-name="2.12吨标煤/万元" transform="translate(61.612 444)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="0" y="0">2018</tspan></text>
+      <text id="_2.12吨标煤_万元-2" data-name="2.12吨标煤/万元" transform="translate(45.42 267)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">17亿元</tspan></text>
+      <text id="_2.12吨标煤_万元-3" data-name="2.12吨标煤/万元" transform="translate(228 444)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="0" y="0">2019</tspan></text>
+      <text id="_2.12吨标煤_万元-4" data-name="2.12吨标煤/万元" transform="translate(217 216)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">22亿元</tspan></text>
+      <text id="第11名_30强_" data-name="第11名（30强）" transform="translate(421 342)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">第5名</tspan></text>
+      <text id="第11名_30强_2" data-name="第11名（30强）" transform="translate(548 342)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">第4名</tspan></text>
+      <text id="第11名_30强_3" data-name="第11名（30强）" transform="translate(674 342)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">第6名</tspan></text>
+      <text id="_1.31吨标煤_万元" data-name="1.31吨标煤/万元" transform="translate(433.94 189)" fill="#fff" font-size="28" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">连续三年前十名</tspan></text>
+      <circle id="椭圆形备份-5" cx="10" cy="10" r="10" transform="translate(410 172)" fill="#6de5ff"/>
+      <text id="_1.31吨标煤_万元-2" data-name="1.31吨标煤/万元" transform="translate(433.94 241)" fill="#fff" font-size="28" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">营收增长迅猛</tspan></text>
+      <circle id="椭圆形备份-5-2" data-name="椭圆形备份-5" cx="10" cy="10" r="10" transform="translate(410 224)" fill="#6de5ff"/>
+      <text id="_1.31吨标煤_万元-3" data-name="1.31吨标煤/万元" transform="translate(679.94 189)" fill="#fff" font-size="28" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">前景广阔</tspan></text>
+      <circle id="椭圆形备份-5-3" data-name="椭圆形备份-5" cx="10" cy="10" r="10" transform="translate(656 172)" fill="#6de5ff"/>
+      <rect id="矩形备份_34" data-name="矩形备份 34" width="40" height="132.337" transform="translate(76.354 280.416)" fill="url(#linear-gradient)"/>
+      <rect id="矩形备份_35" data-name="矩形备份 35" width="40" height="181.624" transform="translate(244.439 230.736)" fill="url(#linear-gradient)"/>
+      <path id="直线-2" d="M424.206,132l13.307,12-13.307,12V146H15v-4H424.206Z" transform="translate(362.487 272)" fill="#6de5ff"/>
+      <ellipse id="椭圆形" cx="40.5" cy="40" rx="40.5" ry="40" transform="translate(421.463 374.5)" fill="#86f4ff" stroke="#182749" stroke-width="2"/>
+      <ellipse id="椭圆形备份" cx="40.5" cy="40" rx="40.5" ry="40" transform="translate(548.116 374.5)" fill="#86f4ff" stroke="#182749" stroke-width="2"/>
+      <ellipse id="椭圆形备份-2" cx="41" cy="40" rx="41" ry="40" transform="translate(674.749 374.5)" fill="#86f4ff" stroke="#182749" stroke-width="2"/>
+      <text id="_2017" data-name="2017" transform="translate(434 426)" fill="#182b51" font-size="28" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">2017</tspan></text>
+      <text id="_2018" data-name="2018" transform="translate(560 426)" fill="#182b51" font-size="28" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">2018</tspan></text>
+      <text id="_2019" data-name="2019" transform="translate(686 426)" fill="#182b51" font-size="28" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">2019</tspan></text>
+    </g>
+  </g>
+</svg>

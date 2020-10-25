@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#52ffea"/>
+      <stop offset="1" stop-color="#20a0ff"/>
+    </linearGradient>
+    <filter id="椭圆_9" x="23.409" y="354.469" width="26.377" height="26.377" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#1e4dbc" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_9-2" x="157" y="330.597" width="26.377" height="26.377" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#1e4dbc" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_9-3" x="290.989" y="318.799" width="26.377" height="26.377" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#1e4dbc" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_9-4" x="425.167" y="300.324" width="26.377" height="26.377" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-color="#1e4dbc" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_9-5" x="558.188" y="286.97" width="26.377" height="26.377" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-color="#1e4dbc" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_9-6" x="692.539" y="267.214" width="26.377" height="26.377" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-color="#1e4dbc" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_10" x="-9" y="64.202" width="40.045" height="40.045" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood flood-color="#1e4dbc" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-扬州大学_高邮_现代农业科教示范园区-1">
+      <rect width="800" height="480"/>
+    </clipPath>
+  </defs>
+  <g id="扬州大学_高邮_现代农业科教示范园区-1" data-name="扬州大学（高邮）现代农业科教示范园区-1" clip-path="url(#clip-扬州大学_高邮_现代农业科教示范园区-1)">
+    <g id="组_295" data-name="组 295">
+      <text id="中国化工园区排行榜" transform="translate(238 38)" fill="#6de5ff" font-size="36" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">扬州市全社会用电量</tspan></text>
+      <text id="_2.12吨标煤_万元" data-name="2.12吨标煤/万元" transform="translate(36 470)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="-36" y="0">2014</tspan></text>
+      <text id="_2.12吨标煤_万元-2" data-name="2.12吨标煤/万元" transform="translate(43 319)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-42.624" y="0">201.5</tspan></text>
+      <rect id="矩形备份_34" data-name="矩形备份 34" width="27.36" height="101.843" transform="translate(22.615 335.876)" fill="url(#linear-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#椭圆_9)">
+        <circle id="椭圆_9-7" data-name="椭圆 9" cx="3.42" cy="3.42" r="3.42" transform="matrix(0.26, 0.97, -0.97, 0.26, 39.02, 363.47)" fill="#3a5bff"/>
+      </g>
+      <text id="_2.12吨标煤_万元-3" data-name="2.12吨标煤/万元" transform="translate(168 470)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="-36" y="0">2015</tspan></text>
+      <text id="_2.12吨标煤_万元-4" data-name="2.12吨标煤/万元" transform="translate(172 292)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-52.224" y="0">213.23</tspan></text>
+      <rect id="矩形备份_34-2" data-name="矩形备份 34" width="27.36" height="125.782" transform="translate(156.212 311.937)" fill="url(#linear-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#椭圆_9-2)">
+        <circle id="椭圆_9-8" data-name="椭圆 9" cx="3.42" cy="3.42" r="3.42" transform="matrix(0.26, 0.97, -0.97, 0.26, 172.61, 339.6)" fill="#3a5bff"/>
+      </g>
+      <text id="_2.12吨标煤_万元-5" data-name="2.12吨标煤/万元" transform="translate(303 470)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="-36" y="0">2016</tspan></text>
+      <text id="_2.12吨标煤_万元-6" data-name="2.12吨标煤/万元" transform="translate(301 277)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-52.224" y="0">220.05</tspan></text>
+      <rect id="矩形备份_34-3" data-name="矩形备份 34" width="27.36" height="138.322" transform="translate(290.249 299.396)" fill="url(#linear-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#椭圆_9-3)">
+        <circle id="椭圆_9-9" data-name="椭圆 9" cx="3.42" cy="3.42" r="3.42" transform="matrix(0.26, 0.97, -0.97, 0.26, 306.6, 327.8)" fill="#3a5bff"/>
+      </g>
+      <text id="_2.12吨标煤_万元-7" data-name="2.12吨标煤/万元" transform="translate(437 470)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="-36" y="0">2017</tspan></text>
+      <text id="_2.12吨标煤_万元-8" data-name="2.12吨标煤/万元" transform="translate(435 261)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-52.224" y="0">237.05</tspan></text>
+      <rect id="矩形备份_34-4" data-name="矩形备份 34" width="27.36" height="158.842" transform="translate(424.287 278.877)" fill="url(#linear-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#椭圆_9-4)">
+        <circle id="椭圆_9-10" data-name="椭圆 9" cx="3.42" cy="3.42" r="3.42" transform="matrix(0.26, 0.97, -0.97, 0.26, 440.77, 309.32)" fill="#3a5bff"/>
+      </g>
+      <text id="_2.12吨标煤_万元-9" data-name="2.12吨标煤/万元" transform="translate(571 470)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="-36" y="0">2018</tspan></text>
+      <text id="_2.12吨标煤_万元-10" data-name="2.12吨标煤/万元" transform="translate(569 247)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-52.224" y="0">244.32</tspan></text>
+      <rect id="矩形备份_34-5" data-name="矩形备份 34" width="27.36" height="171.382" transform="translate(558.324 266.337)" fill="url(#linear-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#椭圆_9-5)">
+        <circle id="椭圆_9-11" data-name="椭圆 9" cx="3.42" cy="3.42" r="3.42" transform="matrix(0.26, 0.97, -0.97, 0.26, 573.79, 295.97)" fill="#3a5bff"/>
+      </g>
+      <text id="_2.12吨标煤_万元-11" data-name="2.12吨标煤/万元" transform="translate(703 470)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="-36" y="0">2019</tspan></text>
+      <text id="_2.12吨标煤_万元-12" data-name="2.12吨标煤/万元" transform="translate(710 198)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-52.224" y="0">259.40</tspan></text>
+      <rect id="矩形备份_34-6" data-name="矩形备份 34" width="27.36" height="220.229" transform="translate(690.604 217.49)" fill="url(#linear-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#椭圆_9-6)">
+        <circle id="椭圆_9-12" data-name="椭圆 9" cx="3.42" cy="3.42" r="3.42" transform="matrix(0.26, 0.97, -0.97, 0.26, 708.15, 276.21)" fill="#3a5bff"/>
+      </g>
+      <path id="路径_101" data-name="路径 101" d="M4806.023,7015.857,4941.181,6992l133.033-11.387,132.619-18.133,134.784-13.811,133.856-19.4" transform="translate(-4769.703 -6648.43)" fill="none" stroke="#3a5dff" stroke-width="2"/>
+      <text id="_2.12吨标煤_万元-13" data-name="2.12吨标煤/万元" transform="translate(0 137)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">单位：亿千瓦时</tspan></text>
+      <text id="_2.12吨标煤_万元-14" data-name="2.12吨标煤/万元" transform="translate(32 93)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">工业用电量</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#椭圆_10)">
+        <circle id="椭圆_10-2" data-name="椭圆 10" cx="9" cy="9" r="9" transform="matrix(0.26, 0.97, -0.97, 0.26, 17.39, 73.2)" fill="#3a5dff"/>
+      </g>
+      <text id="_2.12吨标煤_万元-15" data-name="2.12吨标煤/万元" transform="translate(87 395)" fill="#3a5dff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-48.96" y="0">147.89</tspan></text>
+      <text id="_2.12吨标煤_万元-16" data-name="2.12吨标煤/万元" transform="translate(221 369)" fill="#3a5dff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-48.96" y="0">152.49</tspan></text>
+      <text id="_2.12吨标煤_万元-17" data-name="2.12吨标煤/万元" transform="translate(362 354)" fill="#3a5dff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-48.96" y="0">156.60</tspan></text>
+      <text id="_2.12吨标煤_万元-18" data-name="2.12吨标煤/万元" transform="translate(497 344)" fill="#3a5dff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-48.96" y="0">162.21</tspan></text>
+      <text id="_2.12吨标煤_万元-19" data-name="2.12吨标煤/万元" transform="translate(629 322)" fill="#3a5dff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-48.96" y="0">165.64</tspan></text>
+      <text id="_2.12吨标煤_万元-20" data-name="2.12吨标煤/万元" transform="translate(751 312)" fill="#3a5dff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-48.96" y="0">171.95</tspan></text>
+      <path id="路径_102" data-name="路径 102" d="M4785,7093.752h769.432" transform="translate(-4785 -6656.034)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="2" opacity="0.5"/>
+      <path id="直线-2" d="M339.863,0,358,3.026l-18.14,3.026V3.53L0,3.5V2.489l339.863.032Z" transform="translate(226.034 202.348) rotate(-11)" fill="#6de5ff"/>
+      <text id="_2.12吨标煤_万元-21" data-name="2.12吨标煤/万元" transform="translate(287.102 182.071) rotate(-11)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">用电量增加29%</tspan></text>
+    </g>
+  </g>
+</svg>

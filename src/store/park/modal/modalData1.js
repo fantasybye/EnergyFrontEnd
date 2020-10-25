@@ -5,7 +5,7 @@ const modalData1 = [
         labelData:[
             {
                 name: "投资费用",
-                value: "842",
+                value: "1540",
                 unit: "万元"
             },
             {
@@ -26,7 +26,7 @@ const modalData1 = [
         labelData:[
             {
                 name: "投资费用",
-                value: "1753",
+                value: "2658",
                 unit: "万元"
             },
             {
@@ -47,7 +47,7 @@ const modalData1 = [
         labelData:[
             {
                 name: "投资费用",
-                value: "1629",
+                value: "1986",
                 unit: "万元"
             },
             {
@@ -84,7 +84,7 @@ const modalData1 = [
             {
                 id:"1-3",
                 name:"投资费用对比(万元)",
-                value:[842,1753,1629]
+                value:[1540,2658,1986]
             },
             {
                 id:"1-4",

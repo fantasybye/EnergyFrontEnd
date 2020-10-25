@@ -30,14 +30,14 @@
       </div>
       <div class="home-panel-line-chart" :class="{'has-bar' : !hasBar}" >
         <line-chart :lineData="lineChartData"  v-if="!hasBar"/>
-        <img :src="require(`../../assets/home/chart/home${id}.png`)" alt="" v-if="hasBar"/>
+        <img :src="require(`../../assets/home/chart/home${id}.svg`)" alt="" v-if="hasBar"/>
       </div>
       <div class="home-panel-bar-chart" v-if="id!==1" :class="{'has-bar' : hasBar}">
         <bar-chart :bar-data="barChartData" v-if="hasBar"/>
-        <img :src="require(`../../assets/home/chart/home${id}.png`)" alt="" v-if="!hasBar"/>
+        <img :src="require(`../../assets/home/chart/home${id}.svg`)" alt="" v-if="!hasBar"/>
       </div>
       <div class="home-panel-bar-chart" v-if="id===1">
-        <img src="../../assets/home/chart/home1d.png" alt=""/>
+        <img src="../../assets/home/chart/home1d.svg" alt=""/>
       </div>
     </div>
   </div>
@@ -190,9 +190,9 @@ export default {
     background: rgba(134, 244, 255, 0.05);
   }
   img{
-    width: 720px;
-    height: 400px;
-    margin: 60px;
+    width: 800px;
+    height: 480px;
+    margin: 20px;
   }
   .has-bar{
     background: transparent;

@@ -15,7 +15,7 @@ const homeData0 = {
                 text:"2010-2019年中国化工园区平均产值走势",
                 textStyle:{
                     color:"#6DE5FF",
-                    fontSize: 28,
+                    fontSize: 36,
                     fontWeight: 'normal',
                 },
                 textAlign:'center',
@@ -33,16 +33,17 @@ const homeData0 = {
                 boundaryGap: true,
                 name: '年份',
                 nameTextStyle:{
-                    padding: [64, 0, 0, 0],
-                    fontSize: 20,
-                    color:'rgba(255, 255, 255, 0.65)'
+                    padding: [74, 0, 0, 0],
+                    fontSize: 28,
+                    color:'rgba(255, 255, 255, 1)'
                 },
                 data: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
                 axisLine:{
                     show:false
                 },
                 axisLabel:{
-                    fontSize: 20,
+                    interval: 0,
+                    fontSize: 28,
                 },
                 axisTick: {
                     show:false
@@ -55,11 +56,11 @@ const homeData0 = {
                 name: '亿元',
                 nameTextStyle:{
                     padding: [0, 35, 12, 0],
-                    fontSize: 20,
-                    color:'rgba(255, 255, 255, 0.65)'
+                    fontSize: 28,
+                    color:'rgba(255, 255, 255, 1)'
                 },
                 axisLabel:{
-                    fontSize: 20,
+                    fontSize: 28,
                 },
                 axisLine:{
                     show:false
@@ -77,9 +78,9 @@ const homeData0 = {
                 offset: 12
             },
             textStyle: {
-                color: "rgba(255, 255, 255, 0.65)",
+                color: "rgba(255, 255, 255, 1)",
                 fontFamily: "PingFangSC-Semibold",
-                fontSize:14
+                fontSize:36
             },
             series: [
                 {

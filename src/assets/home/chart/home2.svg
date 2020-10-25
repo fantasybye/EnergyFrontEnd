@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#52ffea"/>
+      <stop offset="1" stop-color="#20a0ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3b54ff"/>
+      <stop offset="1" stop-color="#2ca5ff"/>
+    </linearGradient>
+    <clipPath id="clip-高邮风光产业园-1">
+      <rect width="800" height="480"/>
+    </clipPath>
+  </defs>
+  <g id="高邮风光产业园-1" clip-path="url(#clip-高邮风光产业园-1)">
+    <g id="组_290" data-name="组 290">
+      <text id="中国化工园区排行榜" transform="translate(274 38)" fill="#6de5ff" font-size="36" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">扬州市光伏出口</tspan></text>
+      <path id="路径_103" data-name="路径 103" d="M4785,7093.752h370" transform="translate(-4785 -6756)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="2" opacity="0.5"/>
+      <path id="路径_104" data-name="路径 104" d="M4785,7093.752h370" transform="translate(-4363 -6756)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="2" opacity="0.5"/>
+      <text id="_2.12吨标煤_万元" data-name="2.12吨标煤/万元" transform="translate(202 424)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-160" y="0">比江苏省平均水平高出</tspan><tspan x="-63.472" y="45"> </tspan><tspan y="45" fill="#6de5ff">198.4%</tspan></text>
+      <text id="_2.12吨标煤_万元-2" data-name="2.12吨标煤/万元" transform="translate(603 423)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="-165.328" y="0">比江苏省平均水平高出 </tspan><tspan fill="#6de5ff"><tspan x="-58.144" y="45">202.7%</tspan></tspan></text>
+      <path id="直线-2" d="M433.328,132.63l9.91,5.946-9.91,5.946v-4.955L247.664,139.5v-1.982l185.664.064Z" transform="translate(-215.698 232.174) rotate(-30)" fill="#6de5ff"/>
+      <text id="_2.12吨标煤_万元-3" data-name="2.12吨标煤/万元" transform="translate(45 372)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="0" y="0">2012</tspan></text>
+      <text id="_2.12吨标煤_万元-4" data-name="2.12吨标煤/万元" transform="translate(20 265)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">2228万个</tspan></text>
+      <text id="_2.12吨标煤_万元-5" data-name="2.12吨标煤/万元" transform="translate(271 372)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="0" y="0">2013</tspan></text>
+      <text id="_2.12吨标煤_万元-6" data-name="2.12吨标煤/万元" transform="translate(244 142)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">6463万个</tspan></text>
+      <text id="_2.12吨标煤_万元-7" data-name="2.12吨标煤/万元" transform="matrix(0.875, -0.485, 0.485, 0.875, 48.324, 207.275)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">同比增长2.9倍</tspan></text>
+      <rect id="矩形备份_34" data-name="矩形备份 34" width="40" height="59.337" transform="translate(60.58 278.416)" fill="url(#linear-gradient)"/>
+      <rect id="矩形备份_35" data-name="矩形备份 35" width="40" height="181.624" transform="translate(286.58 155.736)" fill="url(#linear-gradient)"/>
+      <path id="直线-2-2" data-name="直线-2" d="M422.353,132.63l9.535,5.721-9.535,5.721V139.3L268.77,139.06v-1.907l153.583.244Z" transform="translate(199.539 128.327) rotate(-15)" fill="#6de5ff"/>
+      <text id="_2.12吨标煤_万元-8" data-name="2.12吨标煤/万元" transform="translate(457 372)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="0" y="0">2012</tspan></text>
+      <text id="_2.12吨标煤_万元-9" data-name="2.12吨标煤/万元" transform="translate(422 233)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">0.81亿美元</tspan></text>
+      <text id="_2.12吨标煤_万元-10" data-name="2.12吨标煤/万元" transform="translate(683 372)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" opacity="0.5" font-weight="500"><tspan x="0" y="0">2013</tspan></text>
+      <text id="_2.12吨标煤_万元-11" data-name="2.12吨标煤/万元" transform="matrix(0.966, -0.259, 0.259, 0.966, 463.688, 183.372)" fill="#fff" font-size="30" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">同比增长1.8倍</tspan></text>
+      <text id="_2.12吨标煤_万元-12" data-name="2.12吨标煤/万元" transform="translate(638 159)" fill="#fff" font-size="32" font-family="PingFangSC-Medium, PingFang SC" font-weight="500"><tspan x="0" y="0">1.46亿美元</tspan></text>
+      <rect id="矩形备份_34-2" data-name="矩形备份 34" width="40" height="91.705" transform="translate(472.58 246.351)" fill="url(#linear-gradient-3)"/>
+      <rect id="矩形备份_34-3" data-name="矩形备份 34" width="40" height="160.705" transform="translate(698.58 177.351)" fill="url(#linear-gradient-3)"/>
+    </g>
+  </g>
+</svg>
