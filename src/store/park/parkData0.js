@@ -16,7 +16,7 @@ const fuHeData =[
 const fuHeLineData = fuHeLineDataGenerator(fuHeData);
 
 const fangAnDataSet = {
-    bar:[[1230,1980,1730],[10.43,14.22,11.23]],
+    bar:[[1232,1985,1736],[10.43,14.22,11.23]],
     fenlei: {
         radar: [[360,650,220], [623,798,559], [557,750,423]]
     },
@@ -34,9 +34,9 @@ const fangAnData = fangAnBarDataGenerator(fangAnDataSet, tableData);
 
 const yunXingDataSet = {
     zongJie:[
-        [[0, 80],[92, 72],[85, 73]],
-        [[0, 80],[88, 73],[76, 73]],
-        [[0, 84],[76, 69],[80, 79]]
+        [[0, 88.67],[92, 203.45],[85, 142.34]],
+        [[0, 79.23],[88, 178.98],[76, 113.67]],
+        [[0, 84.53],[76, 198.98],[80, 126.67]]
     ],
     xia:{
         leng: [[

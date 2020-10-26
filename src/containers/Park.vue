@@ -200,7 +200,7 @@ export default {
         background4:false
       },
       buttonClicked: 0,
-      leReClicked:0,
+      leReClicked:-1,
       loadingShow: true,
       modalShow: false,
       FAShow: false,
@@ -224,7 +224,6 @@ export default {
   },
   methods: {
     fetchData(){
-      let count = 0;
       const interval = 5000;
       switch (this.$route.query.id){
         case '0':
@@ -300,6 +299,7 @@ export default {
       }
       this.yunXingData = this.parkData.yunXingData.xia;
       this.leReData = this.yunXingData.leng;
+      let count = 0;
       setInterval(() => {
           switch (count%4){
             case 0: this.clickXia();break;
@@ -314,18 +314,20 @@ export default {
     clickXia(){
       this.buttonClicked = 0;
       this.yunXingData = this.parkData.yunXingData.xia;
+      this.leReClicked = -1;
       this.leReData = this.parkData.yunXingData.xia.leng;
     },
     clickDong(){
       this.buttonClicked = 1;
       this.yunXingData = this.parkData.yunXingData.dong;
+      this.leReClicked = -1;
       this.leReData = this.parkData.yunXingData.dong.re;
     },
     clickGuoDu(){
       this.buttonClicked = 2;
       this.yunXingData = this.parkData.yunXingData.guoDu;
       this.leReClicked = 0;
-      this.leReData = this.parkData.yunXingData.guoDu.leng;
+      this.leReData = this.yunXingData.leng;
     },
     clickLeng(){
       this.leReClicked = 0;

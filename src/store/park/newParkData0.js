@@ -29,9 +29,9 @@ const tableData =[
 ];
 const yunXingData = {
     zongJie:[
-        [[78, 82],[93, 73],[87, 73]],
-        [[85, 80],[88, 79],[80, 80]],
-        [[65, 87],[88, 79],[80, 80]]
+        [[0, 88.67],[92, 203.45],[85, 142.34]],
+        [[0, 79.23],[88, 178.98],[76, 113.67]],
+        [[0, 84.53],[76, 198.98],[80, 126.67]]
     ],
     xia:{
         leng: [[
@@ -1549,7 +1549,7 @@ const newParkData0 = {
                 series: [
                     {
                         type: 'bar',
-                        data: yunXingData.zongJie[0][0],
+                        data: yunXingData.zongJie[0][0].map(item => item*1.2),
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1563,7 +1563,7 @@ const newParkData0 = {
                     },
                     {
                         type: 'bar',
-                        data: yunXingData.zongJie[0][1],
+                        data: yunXingData.zongJie[0][1].map(item => item*1.2),
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1577,7 +1577,7 @@ const newParkData0 = {
                     },
                     {
                         type: 'bar',
-                        data: yunXingData.zongJie[0][2],
+                        data: yunXingData.zongJie[0][2].map(item => item*1.2),
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1658,7 +1658,7 @@ const newParkData0 = {
                 series: [
                     {
                         type: 'bar',
-                        data: yunXingData.zongJie[1][0],
+                        data: yunXingData.zongJie[1][0].map(item => item*1.2),
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1672,7 +1672,7 @@ const newParkData0 = {
                     },
                     {
                         type: 'bar',
-                        data: yunXingData.zongJie[1][1],
+                        data: yunXingData.zongJie[1][1].map(item => item*1.2),
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1686,7 +1686,7 @@ const newParkData0 = {
                     },
                     {
                         type: 'bar',
-                        data: yunXingData.zongJie[1][2],
+                        data: yunXingData.zongJie[1][2].map(item => item*1.2),
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1767,7 +1767,7 @@ const newParkData0 = {
                 series: [
                     {
                         type: 'bar',
-                        data: yunXingData.zongJie[2][0],
+                        data: yunXingData.zongJie[2][0].map(item => item*1.2),
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1781,7 +1781,7 @@ const newParkData0 = {
                     },
                     {
                         type: 'bar',
-                        data: yunXingData.zongJie[2][1],
+                        data: yunXingData.zongJie[2][1].map(item => item*1.2),
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
@@ -1795,7 +1795,7 @@ const newParkData0 = {
                     },
                     {
                         type: 'bar',
-                        data: yunXingData.zongJie[2][2],
+                        data: yunXingData.zongJie[2][2].map(item => item*1.2),
                         itemStyle: {        // 系列级个性化折线样式
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
