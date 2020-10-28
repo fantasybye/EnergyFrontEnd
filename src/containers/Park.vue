@@ -48,10 +48,13 @@
         </div>
       </div>
     </div>
-    <div class="modal-wrapper" v-if="modalShow">
+    <div class="modal-wrapper img-modal" v-if="modalShow&&id===1">
+        <ImgModal :modal-no="caseNo"/>
+    </div>
+    <div class="modal-wrapper" v-if="modalShow&&id===0">
       <TuoPuModal :name="modalData[caseNo].name" :img-no="modalData[caseNo].imgNo" :label-data="modalData[caseNo].labelData"/>
     </div>
-    <div class="modal-wrapper" v-if="FAShow">
+    <div class="modal-wrapper" v-if="FAShow&&id===0">
       <FangAnModal :data="modalData[3]"/>
     </div>
     <div class="brief">
@@ -168,6 +171,7 @@ import YunXingBarChart from "@/components/park/bar/YunXingBarChart";
 import newLineChart from '@/components/park/line/newLineChart';
 import TuoPuModal from "@/components/park/modal/TuoPuModal";
 import FangAnModal from "@/components/park/modal/FangAnModal";
+import ImgModal from "@/components/park/modal/ImgModal";
 
 export default {
   components:{
@@ -180,6 +184,7 @@ export default {
     ZongJieBarChart,
     YunXingBarChart,
     newLineChart,
+    ImgModal,
     TuoPuModal,
     FangAnModal
   },
@@ -216,7 +221,7 @@ export default {
         if (key >= 65 && key <= 67) {
           that.keyDownTP(key - 65);
         }
-        if (key === 68) {
+        if (key === 68 && that.id === 0) {
           that.keyDownFA();
         }
       }
@@ -583,7 +588,10 @@ export default {
   padding: 0;
   margin: 0;
   background: rgba( 0 ,12,23,0.85);
-  z-index: 1;
+  z-index: 3;
+}
+.img-modal{
+  background: transparent;
 }
 .she-bei-fang-an{
   display: inline-block;

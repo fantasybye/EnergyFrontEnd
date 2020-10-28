@@ -5,8 +5,8 @@ const modalData1 = [
         labelData:[
             {
                 name: "投资费用",
-                value: "1540",
-                unit: "万元"
+                value: "2.63",
+                unit: "亿元"
             },
             {
                 name: "回收年限",
@@ -26,8 +26,8 @@ const modalData1 = [
         labelData:[
             {
                 name: "投资费用",
-                value: "2658",
-                unit: "万元"
+                value: "2.98",
+                unit: "亿元"
             },
             {
                 name: "回收年限",
@@ -47,8 +47,8 @@ const modalData1 = [
         labelData:[
             {
                 name: "投资费用",
-                value: "1986",
-                unit: "万元"
+                value: "2.42",
+                unit: "亿元"
             },
             {
                 name: "回收年限",
@@ -83,8 +83,8 @@ const modalData1 = [
         double:[
             {
                 id:"1-3",
-                name:"投资费用对比(万元)",
-                value:[1540,2658,1986]
+                name:"投资费用对比(亿元)",
+                value:[2.63,2.98,2.42]
             },
             {
                 id:"1-4",

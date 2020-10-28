@@ -43,7 +43,7 @@ export default {
   background: #121832;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
   border-radius: 12px;
-  z-index: 2;
+  z-index: 4;
 }
 .modal-text{
   width: 1830px;
