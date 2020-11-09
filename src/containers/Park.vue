@@ -6,22 +6,22 @@
     </div>
     <div class="park-header " :class="classObject"/>
     <div class="neng-hao-fen-xi">
-      <div class="panel-title"><span class="panel-title-text">园区能耗分析</span></div>
+      <PanelTitle name=" 园区能耗分析" />
       <div class="panel-body neng-hao-body">
-        <neng-hao-bar-chart :bar-data="parkData.nengHaoData.barData"/>
+        <neng-hao-bar-chart :bar-data="parkData.nengHaoData.barData" :width="484" :height="411"/>
         <neng-hao-pie-chart :pie-data="parkData.nengHaoData.pieData"/>
       </div>
     </div>
     <div class="fu-he-te-xing">
-      <div class="panel-title"><span class="panel-title-text">负荷特性</span></div>
+      <PanelTitle name=" 负荷特性" />
       <div class="panel-body fu-he-body">
         <div class="fu-he-te-xing-chart" v-for="lineData in parkData.fuHeLineData" :key="lineData.id">
-          <fu-he-line-chart  :line-data="lineData" />
+          <fu-he-line-chart  :line-data="lineData" :width="926" :height="300"/>
         </div>
       </div>
     </div>
     <div class="she-bei-tuo-pu">
-      <div class="panel-title"><span class="panel-title-text"> 园区配置方案</span></div>
+      <PanelTitle name=" 园区配置方案" />
       <div class="panel-body she-bei-body">
         <div class="fang-an-top">
           <p class="fang-an-text top-text">现况描述</p>
@@ -71,7 +71,7 @@
       </div>
     </div>
     <div class="yun-xing-qu-xian">
-      <div class="panel-title"><span class="panel-title-text">系统设备运行曲线对比</span></div>
+      <PanelTitle name=" 系统设备运行曲线对比" />
       <div class="panel-body yun-xing-body">
         <div class="an-niu-panel">
           <div class="an-niu-wrapper">
@@ -172,6 +172,7 @@ import newLineChart from '@/components/park/line/newLineChart';
 import TuoPuModal from "@/components/park/modal/TuoPuModal";
 import FangAnModal from "@/components/park/modal/FangAnModal";
 import ImgModal from "@/components/park/modal/ImgModal";
+import PanelTitle from "@/components/park/PanelTitle";
 
 export default {
   components:{
@@ -186,7 +187,8 @@ export default {
     newLineChart,
     ImgModal,
     TuoPuModal,
-    FangAnModal
+    FangAnModal,
+    PanelTitle
   },
   name: "Park",
   data() {
@@ -511,27 +513,7 @@ export default {
 .background4{
   background: url("../assets/park/title/title4.png");
 }
-.panel-title {
-  height: 88px;
-  background: linear-gradient(90deg, rgba(32, 160, 255, 0.2) 0%, rgba(32, 159, 248, 0.1) 100%);
-  border-left: 8px solid #09FBFF;
-  border-image: -webkit-linear-gradient(#09FBFF, #1899FF) 0 100;
-  border-image: -moz-linear-gradient(#09FBFF, #1899FF) 0 100;
-  border-image: linear-gradient(#09FBFF, #1899FF) 0 100;
-  border-radius: 2px;
 
-}
-.panel-title-text{
-  display: inline-block;
-  height: 88px;
-  margin-left: 37px;
-  font-size: 36px;
-  font-family: PingFangSC-Medium, PingFang SC, serif;
-  font-weight: 600;
-  color: #FFFFFF;
-  line-height: 88px;
-  letter-spacing: 1px;
-}
 .panel-body {
   border: 6px solid rgba(33, 160, 253, 0.1);
   border-top: none;

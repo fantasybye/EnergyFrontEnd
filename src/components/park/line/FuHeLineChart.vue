@@ -1,5 +1,5 @@
 <template>
-  <div :id="`fuHeLineChart${lineData.id}`" class="fuHeLineChart" />
+  <div :id="`fuHeLineChart${lineData.id}`" :style="`width:${width}px;height:${height}px`" />
 </template>
 
 <script>
@@ -9,6 +9,12 @@ export default {
     lineData: {
       type: Object,
       required: true
+    },
+    width:{
+      type: Number
+    },
+    height:{
+      type: Number
     }
   },
   mounted(){
@@ -26,8 +32,8 @@ export default {
 </script>
 
 <style scoped>
-.fuHeLineChart{
-  width: 926px;
-  height: 300px;
-}
+/*.fuHeLineChart{*/
+/*  width: 926px;*/
+/*  height: 300px;*/
+/*}*/
 </style>

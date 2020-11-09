@@ -5,6 +5,8 @@ import Park from '@/containers/Park';
 // import JieGuoLineChart from "@/components/home/JieGuoLineChart";
 // import ZhanBiPieChart from "@/components/home/ZhanBiPieChart";
 import Modal from "@/components/park/modal/FangAnModal";
+import newPark from "@/containers/newPark";
+
 Vue.use(Router);
 
 export default new Router({
@@ -27,6 +29,11 @@ export default new Router({
             path: '/test',
             name: 'Test',
             component: Modal
+        },
+        {
+            path: '/newPark',
+            name: 'newPark',
+            component: newPark
         }
     ]
 })

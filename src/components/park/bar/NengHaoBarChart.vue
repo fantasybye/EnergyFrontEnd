@@ -1,5 +1,5 @@
 <template>
-  <div :id="`nengHaoBarChart${barData.id}`" class="nengHaoBarChart" />
+  <div :id="`nengHaoBarChart${barData.id}`" class="nengHaoBarChart" :style="`width:${width}px;height:${height}px`" />
 </template>
 
 <script>
@@ -9,6 +9,12 @@ export default {
     barData: {
       type: Object,
       required: true
+    },
+    width:{
+      type: Number
+    },
+    height:{
+      type: Number
     }
   },
   mounted(){
@@ -27,8 +33,8 @@ export default {
 
 <style scoped>
 .nengHaoBarChart{
-  width: 484px;
-  height: 411px;
+  /*width: 484px;*/
+  /*height: 411px;*/
   display: inline-block;
 }
 </style>
