@@ -1,7 +1,8 @@
 <template>
   <div class="ping-gu-circle">
-    <canvas :id="`myCanvas${id}`" class="float" :width="220" :height="220"></canvas>
-    <span class="circle-label">{{ text }}</span>
+    <canvas :id="`myCanvas${id}`" class="float" :width="220" :height="220">
+<!--      <div class="circle-label">{{ text }}</div>-->
+    </canvas>
   </div>
 </template>
 
@@ -40,10 +41,17 @@ export default {
       ctx.strokeStyle = circleObj.color;
       //连接处样式
       ctx.lineCap = 'round';
+      ctx.fillStyle = '#86F4FF';
+      ctx.textBaseline="middle";
+      ctx.textAlign="center";
+      ctx.font='40px PingFangSC-Medium';
+      ctx.fillText(this.text,circleObj.x-2,circleObj.y+5,165);
       //给环着色
       ctx.stroke();
+      // ctx.fill();
       ctx.closePath();
-    }
+    },
+
   },
   mounted() {
     this.draw()
@@ -53,7 +61,9 @@ export default {
 
 <style scoped>
 .ping-gu-circle{
-  display: inline-block;
+  display: table;
+  position: absolute;
+  left: 240px;
   width: 220px;
   height: 220px;
   /*border: 10px solid #52FFEA ;*/
@@ -67,12 +77,19 @@ export default {
   text-align: center;
 }
 .float{
-  display: inline-block;
+  display: table-cell;
+  float: left;
+  /*position: absolute;*/
+  /*left: 0;*/
 }
 .circle-label{
-  position: absolute;
-  left: 255px;
+  /*position: absolute;*/
+  /*left: 25px;*/
+  padding-left: 30px;
+  float: left;
   width: 180px;
-  line-height: 220px;
+  height: 220px;
+  display: table-cell;
+  vertical-align: middle;
 }
 </style>

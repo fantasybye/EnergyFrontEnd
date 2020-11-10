@@ -1,6 +1,7 @@
 <template>
   <div class="circle-panel">
     <p>{{ text[0] }}</p>
+    <div class="poly" />
     <circle-canvas :text="text[1]" :id="id"/>
   </div>
 </template>
@@ -19,14 +20,28 @@ export default {
 
 <style scoped>
 .circle-panel{
+  position: absolute;
   display: inline-block;
-  width: 450px;
+  width: 460px;
   height: 220px;
+}
+.poly{
+  position: absolute;
+  left: 201px;
+  top: 60px;
+  display: inline-block;
+  width: 45px;
+  height: 50px;
+  background: linear-gradient(45deg, transparent 51%, #86F4FF 51%, #86F4FF 56%, transparent 56%);
 }
 .circle-panel p{
   display: inline-block;
-  width: 230px;
+  position: absolute;
+  left: 2px;
+  top: 12px;
+  width: 200px;
   height: 53px;
+  /*text-indent: 10px;*/
   font-size: 38px;
   font-family: PingFangSC-Medium, PingFang SC,serif;
   font-weight: 500;
