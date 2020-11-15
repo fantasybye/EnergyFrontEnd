@@ -76,7 +76,7 @@ export default {
   left: -25px;
   height: 150px;
   width: 150px;
-  border: 12px solid #b7b7b7;
+  border: 15px solid #b7b7b7;
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
   border-radius: 80px;

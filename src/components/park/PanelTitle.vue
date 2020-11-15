@@ -1,11 +1,11 @@
 <template>
-  <div class="panel-title"><span class="panel-title-text">&nbsp;{{ name }}</span></div>
+  <div class="panel-title"><span class="panel-title-text" :style="fstyle">&nbsp;{{ name }}</span></div>
 </template>
 
 <script>
 export default {
   name: "PanelTitle",
-  props:['name']
+  props:['name','fstyle']
 }
 </script>
 

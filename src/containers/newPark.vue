@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="cloud-view-title">
-      <PanelTitle :name="this.name"/>
+      <PanelTitle :fstyle="{fontSize: '60px'}" :name="this.name"/>
     </div>
     <div class="cloud-view">
       <div class="zhan-img" />
@@ -796,7 +796,7 @@ export default {
   position: absolute;
   left: 1358px;
   top: 154px;
-  width: 725px;
+  width: 1425px;
   height: 99px;
 }
 .cloud-view{
