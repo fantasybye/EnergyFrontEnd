@@ -8,7 +8,7 @@
       <PanelTitle name=" 面向数据中心的典型能源站"/>
       <div class="panel-body tuo-pu-body">
         <div class="img-wrapper">
-          <img :src="require(`../assets/park/new/tuo-pu1.png`)" alt="">
+          <img :src="require(`../assets/park/new/tuo-pu${this.id}-1.png`)" alt="">
         </div>
       </div>
     </div>
@@ -16,51 +16,59 @@
       <PanelTitle name=" 通用型典型能源站"/>
       <div class="panel-body tuo-pu-body">
         <div class="img-wrapper">
-          <img :src="require(`../assets/park/new/tuo-pu2.png`)" alt="">
+          <img :src="require(`../assets/park/new/tuo-pu${this.id}-2.png`)" alt="">
         </div>
       </div>
     </div>
+    <div class="cloud-view-title">
+      <PanelTitle :name="this.name"/>
+    </div>
     <div class="cloud-view">
-      <div class="zhan cloud-text">燃气门站</div>
-      <div class="zhan-line"><ZhanLine /></div>
+      <div class="zhan-img" />
+      <div class="zhan-line"><ZhanLine :has-branch="hasBranch" /></div>
+      <div class="zhan-line">
+        <ZhanFlow id="1"/>
+      </div>
+      <div class="nyz-view" v-for="i in nyzPos[this.id]" :key="`nyz-wra${i.id}`">
+        <NengYuanZhan :id="i.id" :left="i.left" :color="i.color" :top="i.top" :bottom="i.bottom"/>
+      </div>
+      <div class="nyzx-view" v-for="i in nyzxPos" :key="`nyzx-wra${i.id}`">
+        <NengYuanZhongXin :id="i.id" :left="i.left" :top="i.top"/>
+      </div>
+      <div class="cloud-text-view" v-for="i in cloudText" :key="`cloud-text-wra${i.id}`">
+        <CloudText :id="i.id" :left="i.left" :top="i.top" :text="i.text"/>
+      </div>
+      <div class="nyzx-img-view" v-for="i in nyzxImg" :key="`nyzx-img${i.id}`">
+        <CloudImg :id="i.id" :left="i.left" :top="i.top" :type="i.type"/>
+      </div>
       <div class="bian1">
-        <div class="bian-img" />
-        <div class="cloud-text">新东变</div>
+        <div class="bian-img1" />
       </div>
       <div class="bian2">
-        <div class="bian-img" />
-        <div class="cloud-text">越江变</div>
+        <div class="bian-img2" />
       </div>
+      <div class="zhan-point line-point" />
+      <div class="bian-point1 line-point" />
+      <div class="bian-point2 line-point" />
       <div class="bian-line"><BianLine /></div>
-      <div class="point-wrapper-1">
-        <div class="cloud-text point1">中国移动5G数据中心</div>
-        <CloudPoint id="1" color="#CB3D27"/>
+<!--      <div v-for="i in 3" :key="`bian${i}`">-->
+        <div class="bian-line">
+          <BianFlow id="1" />
+        </div>
+<!--      </div>-->
+    </div>
+    <div class="cloud-view-legend">
+      <div class="circle-legend green">
+        <span>面向数据中心型能源站</span>
       </div>
-      <div class="point-wrapper-2">
-        <div class="cloud-text point2">中心北斗卫星遥感产业园</div>
-        <CloudPoint id="2" color="#CB3D27"/>
-      </div>
-      <div class="point-wrapper-3">
-        <div class="cloud-text point3">梓萧数据</div>
-        <CloudPoint id="3" color="#CB3D27"/>
-      </div>
-      <div class="point-wrapper-4">
-        <CloudPoint id="4" color="#86F4FF"/>
-        <div class="cloud-text point4">腾讯云数据中心</div>
-      </div>
-      <div class="point-wrapper-5">
-        <CloudPoint id="5" color="#86F4FF"/>
-        <div class="cloud-text point5">电信云数据中心</div>
-      </div>
-      <div class="point-wrapper-6">
-        <CloudPoint id="6" color="#CB3D27"/>
-        <div class="cloud-text point6">诺德云电机</div>
+      <div class="circle-legend blue">
+         <span>通用型能源站</span>
       </div>
     </div>
     <div class="bottom-panel ping-gu">
       <PanelTitle name=" 评估参数"/>
       <div class="panel-body bottom-body">
-        <div class="circle-panel-wrapper" v-for="item in textArray" :key="item.id">
+        <div class="circle-panel-wrapper" v-for="item in textData" :key="item.id">
           <CirclePanel :text="item.text" :id="item.id"/>
         </div>
       </div>
@@ -97,10 +105,16 @@ import FuHeLineChart from "@/components/park/line/FuHeLineChart";
 import NengHaoPieChart from "@/components/park/NengHaoPieChart";
 import NengHaoBarChart from "@/components/park/bar/NengHaoBarChart";
 import CirclePanel from "@/components/park/circlepanel/CirclePanel";
-import ListItem from "@/components/cloudview/ListItem";
-import CloudPoint from "@/components/park/animation/CloudPoint";
-import ZhanLine from "@/components/cloudview/ZhanLine";
-import BianLine from "@/components/cloudview/BianLine";
+import ListItem from "@/components/park/animation/ListItem";
+// import CloudPoint from "@/components/park/animation/CloudPoint";
+import ZhanLine from "@/components/park/animation/ZhanLine";
+import ZhanFlow from "@/components/park/animation/ZhanFlow";
+import BianLine from "@/components/park/animation/BianLine";
+import BianFlow from "@/components/park/animation/BianFlow";
+import NengYuanZhan from "@/components/park/cloudview/NengYuanZhan";
+import NengYuanZhongXin from "@/components/park/cloudview/NengYuanZhongXin";
+import CloudText from "@/components/park/cloudview/CloudText";
+import CloudImg from "@/components/park/animation/CloudImg";
 
 export default {
   name: "newPark",
@@ -111,62 +125,606 @@ export default {
     NengHaoBarChart,
     CirclePanel,
     ListItem,
-    CloudPoint,
+    // CloudPoint,
     ZhanLine,
-    BianLine
+    ZhanFlow,
+    BianLine,
+    BianFlow,
+    NengYuanZhan,
+    NengYuanZhongXin,
+    CloudText,
+    CloudImg
   },
   data(){
     return{
+      id:0,
       parkData: this.$store.state.park[1],
       classObject:{
         background1: true
       },
-      textArray:[
+      name:'',
+      textData:[],
+      feiYongData:[],
+      nyzPos:[
+        [
+          {
+            id:15,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:590,
+            top:538
+          },
+        {
+          id:0,
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:693,
+          top:710
+        },
+          {
+            id:16,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:750,
+            top:847
+          },
         {
           id:1,
-          text:['总投资额', '2.71亿元']
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:820,
+          top:1035
         },
+          {
+            id:17,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:896,
+            top:1221
+          },
+          {
+            id:18,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:931,
+            top:473
+          },
         {
           id:2,
-          text: ['投资回收期', '7.75年']
+          color:'rgba(38, 145, 255, 1)',//rgba(38, 145, 255, 1)
+          bottom:'rgba(38, 145, 255, 0.52)',
+          left:1128,
+          top:879
         },
         {
           id:3,
-          text: ['碳排放', '1012吨/年']
-        }
-      ],
-      feiYongData:[
-        {
-          id:1,
-          title:'光伏及储能',
-          text:'1380万元'
-        },
-        {
-          id:2,
-          title:'冷水机组',
-          text:'8420万元'
-        },
-        {
-          id:3,
-          title:'热泵机组',
-          text:'2000万元'
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:1224,
+          top:609
         },
         {
           id:4,
-          title:'燃气锅炉',
-          text:'2250万元'
+          color:'rgba(38, 145, 255, 1)',
+          bottom:'rgba(38, 145, 255, 0.52)',
+          left:1297,
+          top:718
         },
+          {
+            id:19,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1430,
+            top:1104
+          },
         {
           id:5,
-          title:'变电站',
-          text:'1.2亿元'
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:1520,
+          top:556
         },
         {
           id:6,
-          title:'其他',
-          text:'1050万元'
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:1630,
+          top:1050
+        },
+        {
+          id:7,
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:1767,
+          top:429
+        },
+        {
+          id:8,
+          color:'rgba(38, 145, 255, 1)',
+          bottom:'rgba(38, 145, 255, 0.52)',
+          left:1803,
+          top:853
+        },
+          {
+            id:20,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1828,
+            top:987
+          },
+        {
+          id:9,
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:2048,
+          top:911
+        },
+        {
+          id:10,
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:2687,
+          top:269
+        },
+          {
+            id:21,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2738,
+            top:396
+          },
+          {
+            id:22,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2861,
+            top:549
+          },
+        {
+          id:11,
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:2848,
+          top:377
+        },
+        {
+          id:12,
+          color:'rgba(11, 219, 221, 1)',
+          bottom:'rgba(11, 219, 221, 0.52)',
+          left:2988,
+          top:519
+        },
+        {
+          id:13,
+          color:'rgba(38, 145, 255, 1)',
+          bottom:'rgba(38, 145, 255, 0.52)',
+          left:3036,
+          top:306
+        },
+        {
+          id:14,
+          color:'rgba(38, 145, 255, 1)',
+          bottom:'rgba(38, 145, 255, 0.52)',
+          left:3232,
+          top:463
+        },
+      ],
+        [
+          {
+            id:15,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:590,
+            top:538
+          },
+          {
+            id:0,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:693,
+            top:710
+          },
+          {
+            id:16,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:750,
+            top:847
+          },
+          {
+            id:1,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:820,
+            top:1035
+          },
+          {
+            id:17,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:896,
+            top:1221
+          },
+          {
+            id:18,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:931,
+            top:473
+          },
+          {
+            id:2,
+            color:'rgba(38, 145, 255, 1)',//rgba(38, 145, 255, 1)
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:1128,
+            top:879
+          },
+          {
+            id:3,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1224,
+            top:609
+          },
+          {
+            id:4,
+            color:'rgba(38, 145, 255, 1)',
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:1297,
+            top:718
+          },
+          {
+            id:19,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1430,
+            top:1104
+          },
+          {
+            id:5,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1520,
+            top:556
+          },
+          {
+            id:6,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1630,
+            top:1050
+          },
+          {
+            id:7,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1767,
+            top:429
+          },
+          {
+            id:8,
+            color:'rgba(38, 145, 255, 1)',
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:1803,
+            top:853
+          },
+          {
+            id:20,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1828,
+            top:987
+          },
+          {
+            id:9,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2048,
+            top:911
+          },
+          {
+            id:10,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2687,
+            top:269
+          },
+          {
+            id:21,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2738,
+            top:396
+          },
+          {
+            id:22,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2861,
+            top:549
+          },
+          {
+            id:11,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2848,
+            top:377
+          },
+          {
+            id:12,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2988,
+            top:519
+          },
+          {
+            id:13,
+            color:'rgba(38, 145, 255, 1)',
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:3036,
+            top:306
+          },
+          {
+            id:14,
+            color:'rgba(38, 145, 255, 1)',
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:3232,
+            top:463
+          },
+        ],
+        [
+          {
+            id:0,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:693,
+            top:710
+          },
+          {
+            id:1,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:820,
+            top:1035
+          },
+          {
+            id:2,
+            color:'rgba(38, 145, 255, 1)',//rgba(38, 145, 255, 1)
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:1128,
+            top:879
+          },
+          {
+            id:3,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1224,
+            top:609
+          },
+          {
+            id:4,
+            color:'rgba(38, 145, 255, 1)',
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:1297,
+            top:718
+          },
+          {
+            id:5,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1520,
+            top:556
+          },
+          {
+            id:6,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:1630,
+            top:1050
+          },
+          {
+            id:7,
+            color:'rgba(38, 145, 255, 1)',
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:1739,
+            top:616
+          },
+          {
+            id:8,
+            color:'rgba(38, 145, 255, 1)',
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:1803,
+            top:853
+          },
+          {
+            id:9,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2048,
+            top:911
+          },
+          {
+            id:10,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2687,
+            top:269
+          },
+          {
+            id:11,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2848,
+            top:377
+          },
+          {
+            id:12,
+            color:'rgba(11, 219, 221, 1)',
+            bottom:'rgba(11, 219, 221, 0.52)',
+            left:2988,
+            top:519
+          },
+          {
+            id:13,
+            color:'rgba(38, 145, 255, 1)',
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:3036,
+            top:306
+          },
+          {
+            id:14,
+            color:'rgba(38, 145, 255, 1)',
+            bottom:'rgba(38, 145, 255, 0.52)',
+            left:3232,
+            top:463
+          },
+        ]
+      ],
+      nyzxPos:[
+        {
+          id:0,
+          left:1115,
+          top:500
+        },
+        {
+          id:1,
+          left:1354,
+          top:828
+        },
+        {
+          id:2,
+          left:1676,
+          top:411
+        },
+        {
+          id:3,
+          left:1879,
+          top:690
+        },
+        {
+          id:4,
+          left:2583,
+          top:267
+        },
+        {
+          id:5,
+          left:2718,
+          top:483
         }
+      ],
+      cloudText:[
+        {
+          id:0,
+          left:1193,
+          top:470,
+          text:'中国移动5G数据中心',
+        },
+        {
+          id:1,
+          left:1753,
+          top:380,
+          text:'中心北斗卫星遥感产业园',
+        },
+        {
+          id:2,
+          left:2657,
+          top:235,
+          text:'梓萧数据',
+        },
+        {
+          id:3,
+          left:1435,
+          top:795,
+          text:'腾讯云数据中心',
+        },
+        {
+          id:4,
+          left:1967,
+          top:660,
+          text:'电信云数据中心',
+        },
+        {
+          id:5,
+          left:2801,
+          top:453,
+          text:'诺德云电机',
+        },
+      ],
+      hasBranch: true,
+      nyzxImg:[
+        {
+          id:0,
+          left:1109,
+          top:699,
+          type:1
+        },
+        {
+          id:1,
+          left:1671,
+          top:613,
+          type:1
+        },
+        {
+          id:2,
+          left:2578,
+          top:467,
+          type:1
+        },
+        {
+          id:3,
+          left:1347,
+          top:1019,
+          type:2
+        },
+        {
+          id:4,
+          left:1869,
+          top:889,
+          type:2
+        },
+        {
+          id:5,
+          left:2712,
+          top:664,
+          type:1
+        },
       ]
+    }
+  },
+  created() {
+    this.fetchData();
+  },
+  methods:{
+    fetchData(){
+      switch (this.$route.query.id){
+        case '0':
+          this.id = 0;
+          this.textData = this.$store.state.newPark[0].textArray;
+          this.feiYongData = this.$store.state.newPark[0].feiYongArray;
+          this.name = this.$store.state.newPark[0].name;
+          this.hasBranch = true;
+          break;
+        case '1':
+          this.id = 1;
+          this.textData = this.$store.state.newPark[1].textArray;
+          this.feiYongData = this.$store.state.newPark[1].feiYongArray;
+          this.name = this.$store.state.newPark[1].name;
+          this.hasBranch = false;
+          break;
+        case '2':
+          this.id = 2;
+          this.textData = this.$store.state.newPark[2].textArray;
+          this.feiYongData = this.$store.state.newPark[2].feiYongArray;
+          this.name = this.$store.state.newPark[2].name;
+          this.hasBranch = true;
+          break;
+        default:
+          this.textData = this.$store.state.newPark[0].textArray;
+          this.feiYongData = this.$store.state.newPark[0].feiYongArray;
+          this.name = this.$store.state.newPark[0].name;
+          this.hasBranch = true;
+          break;
+      }
     }
   }
 }
@@ -234,89 +792,139 @@ export default {
 .tuo-pu-body{
   height: 755px;
 }
+.cloud-view-title{
+  position: absolute;
+  left: 1358px;
+  top: 154px;
+  width: 725px;
+  height: 99px;
+}
 .cloud-view{
   position: absolute;
   left: 1293px;
-  top: 154px;
+  top: 52px;
   width: 3902px;
   height: 1292px;
 }
-.cloud-text{
-  font-family: PingFangSC-Medium, PingFang SC, serif;
-  font-size: 60px;
-  font-weight: 600;
-  color: #FFF;
-}
-.zhan{
+.nyz-view{
+  width: 3902px;
+  height: 1292px;
   position: absolute;
+  left: 0;
   top: 0;
-  text-align: center;
-  font-size: 44px;
-  line-height: 100px;
-  right: 308px;
-  width: 337px;
-  height: 100px;
-  background: linear-gradient(90deg, rgba(32, 160, 255, 0.2) 0%, rgba(32, 159, 248, 0.1) 100%);
-  border-radius: 2px;
+}
+.nyzx-view{
+  width: 3902px;
+  height: 1292px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cloud-text-view{
+  width: 3902px;
+  height: 1292px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nyzx-img-view{
+  width: 3902px;
+  height: 1292px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.zhan-img{
+  position: absolute;
+  top: 191px;
+  left: 3164px;
+  width: 245px;
+  height: 124px;
+  background: url("../assets/park/new/zhan.png");
 }
 .zhan-line{
   position: absolute;
-  top: 50px;
-  left: 95px;
-  width: 3162px;
-  height: 611px;
+  top: 279px;
+  left: 234px;
+  width: 2906px;
+  height: 930px;
 }
 .bian1{
   position: absolute;
-  top: 204px;
-  right: 57px;
+  top: 401px;
+  left: 3454px;
 }
 .bian2{
   position: absolute;
-  top: 997px;
-  left: 30px;
+  top: 1173px;
+  left: 10px;
 }
-.bian-img{
+.bian-img1{
   width: 210px;
   height: 133px;
-  background: url("../assets/park/new/bian.png");
+  background: url("../assets/park/new/bian1.png");
+}
+.bian-img2{
+  width: 210px;
+  height: 133px;
+  background: url("../assets/park/new/bian2.png");
+}
+.line-point{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #FFF000;
+}
+.bian-point1{
+  left: 210px;
+  top: 1192px;
+}
+.bian-point2{
+  left: 3417px;
+  top: 475px;
+}
+.zhan-point{
+  background: #A128FF;
+  left: 3127px;
+  top: 264px;
 }
 .bian-line{
-  width: 3542px;
-  height: 795px;
+  width: 3206px;
+  height: 717px;
   position: absolute;
-  left: 135px;
-  top: 274px;
+  left: 221px;
+  top: 492px;
 }
-.point-wrapper-1{
+.cloud-view-legend{
   position: absolute;
-  left: 907px;
-  top: 443px;
+  left: 4635px;
+  top: 1297px;
+  height: 120px;
+  width: 550px;
 }
-.point-wrapper-2{
-  position: absolute;
-  left: 1556px;
-  top: 278px;
+.cloud-view-legend .green{
+  background: #0BDBDD;
 }
-.point-wrapper-3{
-  position: absolute;
-  left: 2323px;
-  top: 156px;
+.cloud-view-legend .blue{
+  background: #2691FF;
 }
-.point-wrapper-4{
-  position: absolute;
-  left: 1187px;
-  top: 826px;
+.circle-legend{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-bottom: 40px;
 }
-.point-wrapper-5{
-  position: absolute;
-  left: 1893px;
-  top: 677px;
-}
-.point-wrapper-6{
-  position: absolute;
-  left: 2603px;
-  top: 576px;
+.circle-legend span{
+  display: inline-block;
+  line-height: 41px;
+  height: 41px;
+  width: 550px;
+  text-indent: 51px;
+  font-size: 41px;
+  font-family: PingFang SC,serif;
+  font-weight: bold;
+  color: #FFFFFF;
 }
 .bottom-panel{
   position: absolute;

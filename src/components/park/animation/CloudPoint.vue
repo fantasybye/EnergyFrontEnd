@@ -31,9 +31,9 @@ export default {
         endAngle: 2*Math.PI
       };
       this.drawBorder(circle);
-      setInterval(() => {
-        this.drawBorder(circle)
-      }, 100)
+      // setInterval(() => {
+      //   this.drawBorder(circle)
+      // }, 100)
     },
     drawBorder(circle){
       let ctx = circle.context;

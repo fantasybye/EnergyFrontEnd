@@ -2,10 +2,9 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/containers/Home';
 import Park from '@/containers/Park';
-// import JieGuoLineChart from "@/components/home/JieGuoLineChart";
-// import ZhanBiPieChart from "@/components/home/ZhanBiPieChart";
-import Modal from "@/components/park/modal/FangAnModal";
+// import Modal from "@/components/park/modal/FangAnModal";
 import newPark from "@/containers/newPark";
+import test from '@/components/park/animation/Flow'
 
 Vue.use(Router);
 
@@ -28,7 +27,7 @@ export default new Router({
         {
             path: '/test',
             name: 'Test',
-            component: Modal
+            component: test
         },
         {
             path: '/newPark',

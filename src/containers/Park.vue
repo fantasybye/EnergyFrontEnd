@@ -254,31 +254,34 @@ export default {
           this.parkData = this.$store.state.park[1];
           break;
         case '2':
-          this.id=2;
-          this.classObject.background0=false;
-          this.classObject.background1=false;
-          this.classObject.background2=true;
-          this.classObject.background3=false;
-          this.classObject.background4=false;
-          this.parkData = this.$store.state.park[2];
+          // this.id=2;
+          // this.classObject.background0=false;
+          // this.classObject.background1=false;
+          // this.classObject.background2=true;
+          // this.classObject.background3=false;
+          // this.classObject.background4=false;
+          // this.parkData = this.$store.state.park[2];
+          this.$router.push('/newPark?id=0')
           break;
         case '3':
-          this.id=3;
-          this.classObject.background0=false;
-          this.classObject.background1=false;
-          this.classObject.background2=false;
-          this.classObject.background3=true;
-          this.classObject.background4=false;
-          this.parkData = this.$store.state.park[3];
+          // this.id=3;
+          // this.classObject.background0=false;
+          // this.classObject.background1=false;
+          // this.classObject.background2=false;
+          // this.classObject.background3=true;
+          // this.classObject.background4=false;
+          // this.parkData = this.$store.state.park[3];
+          this.$router.push('/newPark?id=1')
           break;
         case '4':
-          this.id=4;
-          this.classObject.background0=false;
-          this.classObject.background1=false;
-          this.classObject.background2=false;
-          this.classObject.background3=false;
-          this.classObject.background4=true;
-          this.parkData = this.$store.state.park[4];
+          // this.id=4;
+          // this.classObject.background0=false;
+          // this.classObject.background1=false;
+          // this.classObject.background2=false;
+          // this.classObject.background3=false;
+          // this.classObject.background4=true;
+          // this.parkData = this.$store.state.park[4];
+          this.$router.push('/newPark?id=2')
           break;
         case 'add':
           this.id=5;

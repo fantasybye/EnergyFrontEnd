@@ -142,7 +142,7 @@ const newQiYeData = [
 
 
 
-const newParkData0 = {
+const addParkData0 = {
     name: "江苏扬州化学工业园区",
     brief: ["扬州化工园区区位条件优越、交通运输便捷。在国家实施的《长江三角洲地区区域规划》中，扬州是沿江和沿运河两带中的重要城市，接受着上海、南京两大都市圈的辐射。" +
     "扬州化工园区交通运输便捷。扬州化工园区产业特色鲜明。区内集聚了中石化仪征化纤、中石油昆仑天然气、中化国际、中国华电集团、美国普莱克斯、英国博纳、日本东丽、住友精化、" +
@@ -4472,4 +4472,4 @@ const newParkData0 = {
     }
 }
 
-export default newParkData0
+export default addParkData0
