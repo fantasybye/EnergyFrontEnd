@@ -11,7 +11,7 @@ export default {
     let ctx = canvas.getContext('2d');
     setInterval(()=>{
       this.lineFlow(ctx,[[2906,0],[0,569]])
-    }, 4000)
+    }, 5000)
   },
   methods:{
     drawFlow(ctx, x1,y1, x2,y2){
@@ -31,7 +31,7 @@ export default {
       ctx.closePath();
     },
     lineFlow(ctx,points) {
-      const speed = 12;
+      const speed = 20;
       const len = 1000;
       if(typeof (points) === "undefined"||points.length < 2) {
         ctx.clearRect(0, 0,2906,600);
@@ -40,7 +40,7 @@ export default {
       const [[x1, y1],[x2, y2]] = points;
       let dx = x2 - x1;
       let dy = y2 - y1;
-      if(Math.abs(dx)<len&&Math.abs(dy)<len){
+      if(Math.abs(dx)<len/2&&Math.abs(dy)<len/2){
         points = points.slice(1)
         this.lineFlow(ctx,points)
         return
@@ -81,6 +81,9 @@ export default {
       window.requestAnimationFrame(() => {
         this.lineFlow(ctx, points)
       })
+      // setTimeout(() => {
+      //   this.lineFlow(ctx, points)
+      // },16.7)
     },
     triFun(x1,y1,x2,y2){
       let tan1 = (y1- y2)/(x1- x2);

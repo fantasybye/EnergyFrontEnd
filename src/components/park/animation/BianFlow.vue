@@ -14,7 +14,7 @@ export default {
     setInterval(()=>{
       this.lineFlow(ctx, [[3206,0],[1603,359]],clear[0])
       this.lineFlow(ctx,[[0,717],[1571,366]],clear[1])
-    },4000)
+    },5000)
   },
   methods:{
     drawFlow(ctx, x1,y1, x2,y2,coo){
@@ -33,8 +33,8 @@ export default {
       ctx.closePath();
     },
     lineFlow(ctx,points,coo) {
-      const speed = 5;
-      const len = 1000;
+      const speed = 10;
+      const len = 800;
       if(typeof (coo) === "undefined"||coo.length < 2) {
         return;
       }
@@ -46,7 +46,7 @@ export default {
       let dx = x2 - x1;
       let dy = y2 - y1;
       let x = x1,y=y1;
-      if(Math.abs(dx)<len&&Math.abs(dy)<len){
+      if(Math.abs(dx)<len/2&&Math.abs(dy)<len/2){
         points = points.slice(1);
         this.lineFlow(ctx,points);
         return
@@ -79,6 +79,9 @@ export default {
       window.requestAnimationFrame(() => {
         this.lineFlow(ctx, points, coo)
       })
+      // setTimeout(() => {
+      //   this.lineFlow(ctx, points, coo)
+      // },16.7)
     },
     triFun(x1,y1,x2,y2){
       let tan1 = (y1- y2)/(x1- x2);

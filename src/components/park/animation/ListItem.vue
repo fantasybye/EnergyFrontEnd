@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 .list-item{
-  width: 230px;
+  width: 270px;
   height: 175px;
   font-family: PingFangSC-Medium, PingFang SC, serif;
   line-height: 53px;

@@ -783,6 +783,10 @@ export default {
   margin: 0 107px;
   padding-top: 20px;
 }
+.tuo-pu .img-wrapper img{
+  width: 100%;
+  height: 100%;
+}
 .tuo-pu-up{
   top: 156px;
 }

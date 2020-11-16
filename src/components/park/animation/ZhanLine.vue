@@ -68,9 +68,12 @@ export default {
       }
       this.drawLine(ctx, x1, y1, x, y);
       points[0] = [x,y];
-      window.requestAnimationFrame(() => {
+      // window.requestAnimationFrame(() => {
+      //   this.lineMove(ctx, points)
+      // })
+      setTimeout(() => {
         this.lineMove(ctx, points)
-      })
+      },17)
     },
   },
   mounted() {
