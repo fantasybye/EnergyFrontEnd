@@ -10,22 +10,31 @@ export default {
     draw(){
       let canvas = document.getElementById('ZhanLine');
       let ctx = canvas.getContext('2d');
-      this.lineMove(ctx, [[2906,0],[0,569]])
-      if(this.hasBranch) {
-        setTimeout(() => {
-          this.lineMove(ctx, [[885, 390], [915, 430]])
-          this.lineMove(ctx, [[1063, 359], [1345, 700]])
-          this.lineMove(ctx, [[1425, 289], [1476, 347]])
-          this.lineMove(ctx, [[1606, 252], [1906, 580]])
-          this.lineMove(ctx, [[2298, 118], [2370, 193]])
-          this.lineMove(ctx, [[2577, 64], [2829, 336]])
-          setTimeout(() => {
-            this.lineMove(ctx, [[1354, 720], [1206, 760]])
-            this.lineMove(ctx, [[1900, 580], [1724, 628]])
-            this.lineMove(ctx, [[2839, 340], [2564, 410]])
-          }, 600)
-        }, 3000)
-      }
+      ctx.beginPath();
+      ctx.moveTo(2906,0);
+      ctx.lineTo(0,569);
+      ctx.lineJoin='round';
+      ctx.lineCap='round';
+      ctx.lineWidth = 10;
+      ctx.strokeStyle= '#A128FF';
+      ctx.stroke();
+      ctx.closePath();
+      // this.lineMove(ctx, [[2906,0],[0,569]])
+      // if(this.hasBranch) {
+      //   setTimeout(() => {
+      //     this.lineMove(ctx, [[885, 390], [915, 430]])
+      //     this.lineMove(ctx, [[1063, 359], [1345, 700]])
+      //     this.lineMove(ctx, [[1425, 289], [1476, 347]])
+      //     this.lineMove(ctx, [[1606, 252], [1906, 580]])
+      //     this.lineMove(ctx, [[2298, 118], [2370, 193]])
+      //     this.lineMove(ctx, [[2577, 64], [2829, 336]])
+      //     setTimeout(() => {
+      //       this.lineMove(ctx, [[1354, 720], [1206, 760]])
+      //       this.lineMove(ctx, [[1900, 580], [1724, 628]])
+      //       this.lineMove(ctx, [[2839, 340], [2564, 410]])
+      //     }, 600)
+      //   }, 3000)
+      // }
     },
     drawLine(ctx, x1,y1, x2,y2){
       ctx.beginPath();

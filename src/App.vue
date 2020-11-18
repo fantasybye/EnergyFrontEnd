@@ -36,4 +36,8 @@ body, html{
   width: 100%;
   height: 100%;
 }
+/*body{*/
+/*  transform: scale(0.51);*/
+/*  transform-origin: left top 0;*/
+/*}*/
 </style>

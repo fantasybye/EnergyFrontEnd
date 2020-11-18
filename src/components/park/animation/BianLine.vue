@@ -9,16 +9,25 @@ export default {
     draw(){
       let canvas = document.getElementById('BianLine');
       let ctx = canvas.getContext('2d');
-      this.lineMove(ctx, [[3206,0],[1603,359]])
-      this.lineMove(ctx,[[0,717],[1603,359]])
-      setTimeout(()=>{
-        this.lineMove(ctx, [[1108,466],[953,254]])
-        this.lineMove(ctx,[[1108,466],[1160,534]])
-        this.lineMove(ctx, [[1631,349],[1514,168]])
-        this.lineMove(ctx,[[1631,349],[1683,413]])
-        this.lineMove(ctx, [[2489,159],[2520,185]])
-        this.lineMove(ctx,[[2556,149],[2435,28]])
-      },3000)
+      ctx.beginPath();
+      ctx.moveTo(3206,0);
+      ctx.lineTo(0,717);
+      ctx.lineJoin='round';
+      ctx.lineCap='round';
+      ctx.lineWidth = 10;
+      ctx.strokeStyle= '#FFF000';
+      ctx.stroke();
+      ctx.closePath();
+      // this.lineMove(ctx, [[3206,0],[1603,359]])
+      // this.lineMove(ctx,[[0,717],[1603,359]])
+      // setTimeout(()=>{
+      //   this.lineMove(ctx, [[1108,466],[953,254]])
+      //   this.lineMove(ctx,[[1108,466],[1160,534]])
+      //   this.lineMove(ctx, [[1631,349],[1514,168]])
+      //   this.lineMove(ctx,[[1631,349],[1683,413]])
+      //   this.lineMove(ctx, [[2489,159],[2520,185]])
+      //   this.lineMove(ctx,[[2556,149],[2435,28]])
+      // },3000)
     },
     drawLine(ctx, x1,y1, x2,y2){
       ctx.beginPath();
